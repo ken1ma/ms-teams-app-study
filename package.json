@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@microsoft/teamsapp-cli": "^3.0.0-alpha.ec50e3de8.0"
+  }
+}
