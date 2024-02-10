@@ -14,3 +14,8 @@
        npm install --save-dev @microsoft/teamsapp-cli
 
     1. 2024-02-10: version `3.0.0-alpha.ec50e3de8.0` (2023-11-13) has been installed
+
+
+# Commands
+
+    npm run -- teamsapp -h
