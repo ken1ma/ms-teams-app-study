@@ -11,13 +11,13 @@ provision:
   - uses: teamsApp/create
     with:
       # Teams app name
-      name: {{appName}}${{APP_NAME_SUFFIX}}
+      name: non-sso-tab-js-01${{APP_NAME_SUFFIX}}
     # Write the information of created resources into environment file for
     # the specified environment variable(s).
     writeToEnvironmentFile:
       teamsAppId: TEAMS_APP_ID
 
-  - uses: arm/deploy  # Deploy given ARM templates parallelly.
+  - uses: arm/deploy # Deploy given ARM templates parallelly.
     with:
       # AZURE_SUBSCRIPTION_ID is a built-in environment variable,
       # if its value is empty, TeamsFx will prompt you to select a subscription.
@@ -31,7 +31,7 @@ provision:
       # will skip the resource group selection prompt.
       resourceGroupName: ${{AZURE_RESOURCE_GROUP_NAME}}
       templates:
-        - path: ./infra/azure.bicep  # Relative path to this file
+        - path: ./infra/azure.bicep # Relative path to this file
           # Relative path to this yaml file.
           # Placeholders will be replaced with corresponding environment
           # variable before ARM deployment.
@@ -134,3 +134,4 @@ publish:
     # the specified environment variable(s).
     writeToEnvironmentFile:
       publishedAppId: TEAMS_APP_PUBLISHED_APP_ID
+projectId: 057fad35-8270-4262-911d-065697ca381e
