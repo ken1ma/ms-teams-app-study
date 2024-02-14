@@ -7,3 +7,4 @@ additionalMetadata:
   sampleTag: Microsoft-Teams-Samples:bot-file-upload-nodejs
 
 environmentFolderPath: ./env
+projectId: 5c9bc33f-4308-447f-9623-069256c67525

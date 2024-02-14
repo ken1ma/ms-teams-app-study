@@ -1,0 +1,146 @@
+[2024-02-16T02:04:31.701Z] [Info] - Current VS Code locale is: en-us
+[2024-02-16T02:04:31.751Z] [Info] - Teams Toolkit extension is now active!
+[2024-02-16T02:04:38.118Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Node.js version (v20.11.0) is installed 
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (3978, 9239) are not occupied 
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-16T02:04:38.887Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.77 seconds.
+[2024-02-16T02:04:38.903Z] [Info] - Running Visual Studio Code task: 'Start local tunnel'
+
+(Total: 1 Step) Teams Toolkit is starting the local tunneling service to forward public URL to local port and inspect traffic. Open terminal window to see the details.
+
+(1/1) Starting dev tunnel service ... 
+
+[2024-02-16T02:04:40.781Z] [Info] -   Created environment file at /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-file-upload-01/nodejs/env/.env.local
+
+
+Summary:
+
+(√) Done: Forwarding URL https://wh7kgk48-3978.asse.devtunnels.ms/ to http://localhost:3978. Saved [BOT_DOMAIN, BOT_ENDPOINT] to /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-file-upload-01/nodejs/env/.env.local.
+
+Visit https://aka.ms/teamsfx-local-tunnel-task to learn more about 'Start local tunnel' task.
+
+[2024-02-16T02:04:40.781Z] [Info] - Started local tunneling service in 1.88 seconds.
+[2024-02-16T02:04:40.915Z] [Info] - check whether azure account is signed in.
+[2024-02-16T02:04:40.916Z] [Info] - subscription is not selected, try to select.
+[2024-02-16T02:04:40.918Z] [Info] - successful to select subscription: c29b46fa-03aa-4384-9190-a3a9608ff3fd
+[2024-02-16T02:04:46.271Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(8 step(s) in total). The following actions will be executed: 
+(1/8) Action aadApp/create: Create a Microsoft Entra app to authenticate users
+(2/8) Action teamsApp/create: create a Teams app.
+(3/8) Action script
+(4/8) Action arm/deploy: Deploy the given ARM templates to Azure.
+(5/8) Action teamsApp/validateManifest: validate a Teams app.
+(6/8) Action teamsApp/zipAppPackage: build a Teams app package.
+(7/8) Action teamsApp/validateAppPackage: validate a Teams app.
+(8/8) Action teamsApp/update: update a Teams app.
+
+[2024-02-16T02:04:46.271Z] [Info] - Executing lifecycle provision
+[2024-02-16T02:04:46.273Z] [Info] - Executing action aadApp/create
+[2024-02-16T02:04:46.273Z] [Info] - Environment variable AAD_APP_CLIENT_ID does not exist, creating a new Microsoft Entra app...
+[2024-02-16T02:04:46.274Z] [Info] - Sending API request: applications. Request body: {"displayName":"bot-file-upload-aad","signInAudience":"AzureADandPersonalMicrosoftAccount"}
+[2024-02-16T02:04:48.966Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#applications/$entity","id":"d2614268-1119-4c11-ab88-ee8a0ac47818","deletedDateTime":null,"appId":"fde7edd8-9561-4b04-938b-6d6194471e48","applicationTemplateId":null,"disabledByMicrosoftStatus":null,"createdDateTime":"2024-02-16T02:04:47.3776022Z","displayName":"bot-file-upload-aad","description":null,"groupMembershipClaims":null,"identifierUris":[],"isDeviceOnlyAuthSupported":null,"isFallbackPublicClient":null,"notes":null,"publisherDomain":"7756s8.onmicrosoft.com","serviceManagementReference":null,"signInAudience":"AzureADandPersonalMicrosoftAccount","tags":[],"tokenEncryptionKeyId":null,"samlMetadataUrl":null,"defaultRedirectUri":null,"certification":null,"optionalClaims":null,"servicePrincipalLockConfiguration":null,"requestSignatureVerification":null,"addIns":[],"api":{"acceptMappedClaims":null,"knownClientApplications":[],"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[],"preAuthorizedApplications":[]},"appRoles":[],"info":{"logoUrl":null,"marketingUrl":null,"privacyStatementUrl":null,"supportUrl":null,"termsOfServiceUrl":null},"keyCredentials":[],"parentalControlSettings":{"countriesBlockedForMinors":[],"legalAgeGroupRule":"Allow"},"passwordCredentials":[],"publicClient":{"redirectUris":[]},"requiredResourceAccess":[],"verifiedPublisher":{"displayName":null,"verifiedPublisherId":null,"addedDateTime":null},"web":{"homePageUrl":null,"logoutUrl":null,"redirectUris":[],"implicitGrantSettings":{"enableAccessTokenIssuance":false,"enableIdTokenIssuance":false},"redirectUriSettings":[]},"spa":{"redirectUris":[]}}.
+[2024-02-16T02:04:48.975Z] [Info] - Created Microsoft Entra application with object id d2614268-1119-4c11-ab88-ee8a0ac47818
+[2024-02-16T02:04:48.975Z] [Info] - Environment variable SECRET_AAD_APP_CLIENT_SECRET does not exist, generating client secret for Microsoft Entra app...
+[2024-02-16T02:04:48.977Z] [Info] - Sending API request: applications/d2614268-1119-4c11-ab88-ee8a0ac47818/addPassword. Request body: {"passwordCredential":{"displayName":"default"}}
+[2024-02-16T02:04:50.889Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.passwordCredential","customKeyIdentifier":null,"displayName":"default","endDateTime":"2026-02-16T02:04:50.0221853Z","hint":"RSX","keyId":"28402191-ac81-448a-abe1-df20bc08848d","secretText":"RSX8Q~KpPZbbvlliTPtLQygUvcf7zoZxPccu~ci4","startDateTime":"2024-02-16T02:04:50.0221853Z"}.
+[2024-02-16T02:04:50.889Z] [Info] - Generated client secret for Microsoft Entra application with object id d2614268-1119-4c11-ab88-ee8a0ac47818
+[2024-02-16T02:04:50.889Z] [Info] - Action aadApp/create executed successfully
+[2024-02-16T02:04:54.814Z] [Info] -  [script action stdout] ::set-teamsfx-env MICROSOFT_APP_TYPE=MultiTenant
+::set-teamsfx-env MICROSOFT_APP_TENANT_ID=b3d2963c-027e-4299-8463-d8ae5508bbe9
+
+[2024-02-16T02:04:54.816Z] [Info] - Executing action arm/deploy
+[2024-02-16T02:05:10.739Z] [Info] - Action arm/deploy executed successfully
+[2024-02-16T02:05:11.324Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+All passed.
+
+
+[2024-02-16T02:05:11.329Z] [Info] - (√)Done: Teams Package /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-file-upload-01/nodejs/appManifest/build/appManifest.local.zip built successfully!
+[2024-02-16T02:05:12.331Z] [Info] - 
+Teams Toolkit has checked against all validation rules:
+
+Summary:
+49 passed.
+
+
+
+A complete log of validations can be found in /Users/kenichi/Library/Application Support/Code/logs/20240216T110430/window1/exthost/TeamsDevApp.ms-teams-vscode-extension/20240216T020431.log
+[2024-02-16T02:05:13.946Z] [Info] - Finished Executing lifecycle provision. Result: {"AAD_APP_CLIENT_ID":"fde7edd8-9561-4b04-938b-6d6194471e48","AAD_APP_OBJECT_ID":"d2614268-1119-4c11-ab88-ee8a0ac47818","AAD_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","AAD_APP_OAUTH_AUTHORITY":"https://login.microsoftonline.com/b3d2963c-027e-4299-8463-d8ae5508bbe9","AAD_APP_OAUTH_AUTHORITY_HOST":"https://login.microsoftonline.com","SECRET_AAD_APP_CLIENT_SECRET":"******","TEAMS_APP_ID":"d86ebdcb-fd0e-46b5-b467-0a572ee7353e","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","MICROSOFT_APP_TYPE":"MultiTenant","MICROSOFT_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","TEAMS_APP_UPDATE_TIME":"2024-02-16T02:05:13.9498374+00:00"}
+[2024-02-16T02:05:13.948Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage provision was executed successfully.
+  (√) Done: aadApp/create was executed successfully.
+    (√) Done: Created Microsoft Entra application with object id d2614268-1119-4c11-ab88-ee8a0ac47818
+    (√) Done: Generated client secret for Microsoft Entra application with object id d2614268-1119-4c11-ab88-ee8a0ac47818
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app created d86ebdcb-fd0e-46b5-b467-0a572ee7353e
+  (√) Done: script was executed successfully.
+    (√) Done: Successfully executed command echo "::set-teamsfx-env MICROSOFT_APP_TYPE=MultiTenant"; echo "::set-teamsfx-env MICROSOFT_APP_TENANT_ID=b3d2963c-027e-4299-8463-d8ae5508bbe9";
+  (√) Done: arm/deploy was executed successfully.
+  (√) Done: teamsApp/validateManifest was executed successfully.
+  (√) Done: teamsApp/zipAppPackage was executed successfully.
+  (√) Done: teamsApp/validateAppPackage was executed successfully.
+  (√) Done: teamsApp/update was executed successfully.
+    (√) Done: Teams app updated d86ebdcb-fd0e-46b5-b467-0a572ee7353e
+
+[2024-02-16T02:05:13.949Z] [Info] - Successfully executed 8/8 actions in provision stage.
+[2024-02-16T02:05:14.023Z] [Info] -   Created environment file (secret) at /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-file-upload-01/nodejs/env/.env.local.user
+
+
+[2024-02-16T02:05:14.133Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(2 step(s) in total). The following actions will be executed: 
+(1/2) Action cli/runNpmCommand: running npm command.
+(2/2) Action file/createOrUpdateEnvironmentFile: Create or update variables to environment file.
+
+[2024-02-16T02:05:14.134Z] [Info] - Executing lifecycle deploy
+[2024-02-16T02:05:14.414Z] [Warning] -  [script action stderr] npm WARN
+[2024-02-16T02:05:14.415Z] [Warning] -  [script action stderr]  EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@azure/msal-node@1.18.0',
+npm WARN EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-16T02:05:14.997Z] [Warning] -  [script action stderr] npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+
+[2024-02-16T02:05:15.051Z] [Warning] -  [script action stderr] npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+[2024-02-16T02:05:17.426Z] [Info] -  [script action stdout] 
+added 415 packages in 3s
+
+[2024-02-16T02:05:17.427Z] [Info] -  [script action stdout] 
+74 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-16T02:05:17.436Z] [Info] - Finished Executing lifecycle deploy. Result: {}
+[2024-02-16T02:05:17.436Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: cli/runNpmCommand was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-file-upload-01/nodejs/`.
+  (√) Done: file/createOrUpdateEnvironmentFile was executed successfully.
+    (√) Done: The variables have been generated successfully to /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-file-upload-01/nodejs/.env.
+
+[2024-02-16T02:05:18.507Z] [Info] - Launching Teams web client.
+
+Teams web client is being launched for you to debug the Teams app: https://teams.microsoft.com/l/app/d86ebdcb-fd0e-46b5-b467-0a572ee7353e?installAppPackage=true&webjoin=true&appTenantId=b3d2963c-027e-4299-8463-d8ae5508bbe9&login_hint=kenichi-microsoft-2023@7756s8.onmicrosoft.com.
+
+The app supports hot reloading. If you have any code changes in the project, the app will be reloaded.
