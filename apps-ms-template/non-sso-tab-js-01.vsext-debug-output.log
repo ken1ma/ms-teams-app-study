@@ -1,0 +1,121 @@
+[2024-02-14T00:11:57.395Z] [Info] - Current VS Code locale is: en-us
+[2024-02-14T00:11:57.417Z] [Info] - Teams Toolkit extension is now active!
+[2024-02-14T00:12:09.655Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (53000, 9239) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16 || 18). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-14T00:12:10.450Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.80 seconds.
+[2024-02-14T00:12:10.486Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(7 step(s) in total). The following actions will be executed: 
+(1/7) Action teamsApp/create: create a Teams app.
+(2/7) Action script
+(3/7) Action teamsApp/validateManifest: validate a Teams app.
+(4/7) Action teamsApp/zipAppPackage: build a Teams app package.
+(5/7) Action teamsApp/validateAppPackage: validate a Teams app.
+(6/7) Action teamsApp/update: update a Teams app.
+(7/7) Action teamsApp/extendToM365: acquire an Microsoft 365 title with the app package
+
+[2024-02-14T00:12:10.487Z] [Info] - Executing lifecycle provision
+[2024-02-14T00:12:15.583Z] [Info] -  [script action stdout] ::set-teamsfx-env TAB_DOMAIN=localhost:53000
+::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000
+
+[2024-02-14T00:12:15.716Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+All passed.
+
+
+[2024-02-14T00:12:15.720Z] [Info] - (√)Done: Teams Package /Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-js-01/appPackage/build/appPackage.local.zip built successfully!
+[2024-02-14T00:12:17.114Z] [Info] - 
+Teams Toolkit has checked against all validation rules:
+
+Summary:
+47 passed.
+
+
+
+A complete log of validations can be found in /Users/kenichi/Library/Application Support/Code/logs/20240214T091138/window1/exthost/TeamsDevApp.ms-teams-vscode-extension/20240214T001157.log
+[2024-02-14T00:12:26.372Z] [Info] - TitleId: U_b8e850d0-208a-f496-34f2-f33d75aef074
+[2024-02-14T00:12:26.372Z] [Info] - AppId: 6b460b1e-42b5-4730-8031-4fd2a462ccda
+[2024-02-14T00:12:26.375Z] [Info] - Finished Executing lifecycle provision. Result: {"TEAMS_APP_ID":"17b6437d-0c55-4b43-8604-e966ef94eb3d","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","TAB_DOMAIN":"localhost:53000","TAB_ENDPOINT":"https://localhost:53000","TEAMS_APP_UPDATE_TIME":"2024-02-14T00:12:19.2354616+00:00","M365_TITLE_ID":"U_b8e850d0-208a-f496-34f2-f33d75aef074","M365_APP_ID":"6b460b1e-42b5-4730-8031-4fd2a462ccda"}
+[2024-02-14T00:12:26.378Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage provision was executed successfully.
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app created 17b6437d-0c55-4b43-8604-e966ef94eb3d
+  (√) Done: script was executed successfully.
+    (√) Done: Successfully executed command echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000"; echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
+  (√) Done: teamsApp/validateManifest was executed successfully.
+  (√) Done: teamsApp/zipAppPackage was executed successfully.
+  (√) Done: teamsApp/validateAppPackage was executed successfully.
+  (√) Done: teamsApp/update was executed successfully.
+    (√) Done: Teams app updated 17b6437d-0c55-4b43-8604-e966ef94eb3d
+  (√) Done: teamsApp/extendToM365 was executed successfully.
+    (√) Done: The Microsoft 365 title has been acquired successfully (U_b8e850d0-208a-f496-34f2-f33d75aef074).
+
+[2024-02-14T00:12:26.379Z] [Info] - Successfully executed 7/7 actions in provision stage.
+[2024-02-14T00:12:26.398Z] [Info] -   Created environment file at /Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-js-01/env/.env.local
+
+
+[2024-02-14T00:12:26.398Z] [Info] -   Created environment file (secret) at /Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-js-01/env/.env.local.user
+
+
+[2024-02-14T00:12:26.456Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(3 step(s) in total). The following actions will be executed: 
+(1/3) Action devTool/install: installing dependencies
+(2/3) Action cli/runNpmCommand(install dependencies): running npm command.
+(3/3) Action file/createOrUpdateEnvironmentFile: Create or update variables to environment file.
+
+[2024-02-14T00:12:26.456Z] [Info] - Executing lifecycle deploy
+[2024-02-14T00:12:31.818Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'nonssotabjs01@0.1.0',
+npm
+[2024-02-14T00:12:31.819Z] [Warning] -  [script action stderr]  WARN EBADENGINE   required: { node: '16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-14T00:12:32.023Z] [Warning] -  [script action stderr] npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+
+[2024-02-14T00:12:34.049Z] [Info] -  [script action stdout] 
+added 167 packages in 7s
+
+[2024-02-14T00:12:34.049Z] [Info] -  [script action stdout] 
+20 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-14T00:12:34.057Z] [Info] - Finished Executing lifecycle deploy. Result: {"SSL_CRT_FILE":"/Users/kenichi/.fx/certificate/localhost.crt","SSL_KEY_FILE":"/Users/kenichi/.fx/certificate/localhost.key"}
+[2024-02-14T00:12:34.058Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: devTool/install was executed successfully.
+    (√) Done: Development certificate for localhost is installed.
+  (√) Done: cli/runNpmCommand(install dependencies) was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-js-01/`.
+  (√) Done: file/createOrUpdateEnvironmentFile was executed successfully.
+    (√) Done: The variables have been generated successfully to /Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-js-01/.localConfigs.
+
+[2024-02-14T00:12:34.896Z] [Info] - Launching Teams web client.
+
+Teams web client is being launched for you to debug the Teams app: https://teams.microsoft.com/l/app/17b6437d-0c55-4b43-8604-e966ef94eb3d?installAppPackage=true&webjoin=true&appTenantId=b3d2963c-027e-4299-8463-d8ae5508bbe9&login_hint=kenichi-microsoft-2023@7756s8.onmicrosoft.com.
+
+The app supports hot reloading. If you have any code changes in the project, the app will be reloaded.
