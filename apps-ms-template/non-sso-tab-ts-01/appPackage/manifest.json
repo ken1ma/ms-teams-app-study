@@ -15,12 +15,12 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "{{appName}}${{APP_NAME_SUFFIX}}",
-        "full": "Full name for {{appName}}"
+        "short": "non-sso-tab-ts-01${{APP_NAME_SUFFIX}}",
+        "full": "Full name for non-sso-tab-ts-01"
     },
     "description": {
-        "short": "Short description of {{appName}}",
-        "full": "Full description of {{appName}}"
+        "short": "Short description of non-sso-tab-ts-01",
+        "full": "Full description of non-sso-tab-ts-01"
     },
     "accentColor": "#FFFFFF",
     "bots": [],

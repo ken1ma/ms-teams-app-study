@@ -1,0 +1,55 @@
+> teamsapp
+> teamsapp new --app-name non-sso-tab-ts-01 --capability tab-non-sso --programming-language typescript --folder apps-ms-template/ --interactive false --debug
+
+user argument list: ["new","--app-name","non-sso-tab-ts-01","--capability","tab-non-sso","--programming-language","typescript","--folder","apps-ms-template/","--interactive","false","--debug"]
+matched command: teamsapp new
+find option: {"token":"--app-name","option":"app-name","value":"non-sso-tab-ts-01","isGlobal":false}
+find option: {"token":"--capability","option":"capability","value":"tab-non-sso","isGlobal":false}
+find option: {"token":"--programming-language","option":"programming-language","value":"typescript","isGlobal":false}
+find option: {"token":"--folder","option":"folder","value":"apps-ms-template/","isGlobal":false}
+find option: {"token":"--interactive","option":"interactive","value":false,"isGlobal":true}
+find option: {"token":"--debug","option":"debug","value":true,"isGlobal":true}
+parsed context: {
+  "optionValues": {
+    "app-name": "non-sso-tab-ts-01",
+    "capabilities": "tab-non-sso",
+    "programming-language": "typescript",
+    "folder": "apps-ms-template/",
+    "nonInteractive": true,
+    "correlationId": "c9eb2713-7108-490d-a9cf-13fbd48c6415",
+    "platform": "cli"
+  },
+  "globalOptionValues": {
+    "interactive": false,
+    "debug": true
+  },
+  "argumentValues": [],
+  "telemetryProperties": {
+    "command-name": "teamsapp new",
+    "component": "cli",
+    "run-from": "Other",
+    "bin-name": "teamsapp",
+    "command-debug": "true",
+    "command-verbose": "undefined",
+    "command-help": "undefined",
+    "command-interactive": "false",
+    "command-version": "undefined",
+    "correlation-id": "c9eb2713-7108-490d-a9cf-13fbd48c6415"
+  }
+}
+sendTelemetryEvent ===> create-project-start, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"project-type","platform":"cli","stage":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"capabilities","answer":"tab-non-sso","platform":"cli","stage":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"programming-language","answer":"typescript","platform":"cli","stage":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"folder","answer":"","platform":"cli","stage":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"app-name","answer":"","platform":"cli","stage":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+sendTelemetryEvent ===> create-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+sendTelemetryEvent ===> generate-template-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+Downloading app template "non-sso-tab-ts" to /Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-ts-01
+Fetching template url with tag: {"name":"ts","destination":"/Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-ts-01","logProvider":{"logLevel":1}}
+Fetching zip from local: {"name":"ts","destination":"/Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-ts-01","logProvider":{"logLevel":1},"cancelDownloading":true}
+sendTelemetryEvent ===> generate-template, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","template-name":"non-sso-tab-ts","fallback":"true","success":"yes","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+████████████████████  100% | [1/1] Create  (✔) Done.
+sendTelemetryEvent ===> create, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","capabilities":"tab-non-sso","is-from-developer-portal":"false","success":"yes","correlation-id":"a8c557be-43c4-4060-b723-4c988f5d22b7","run-from":"Other"}
+Project created at: /Users/kenichi/study/ms-teams-app-study/apps-ms-template/non-sso-tab-ts-01
+sendTelemetryEvent ===> create-project, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes","new-project-id":"7dee9cd7-fd18-4269-9877-f5d32715a3ad","is-creating-m365":"undefined"}

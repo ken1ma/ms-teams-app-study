@@ -27,7 +27,19 @@
     1. [149fcc0](https://github.com/OfficeDev/TeamsFx/commit/149fcc03572b6f7b244f3b1f9ba92c4e66df3e00) (2023-11-09) has been applied
     1. It seems the template at `teamsapp-cli-3.0.0-alpha.ec50e3de8.0` (2023-11-13) is used
 
+## non-sso-tab-ts-01
+
+1. Create a project
+
+       npm run -- teamsapp new --app-name non-sso-tab-js-01 \
+               --capability tab-non-sso \
+               --programming-language typescript \
+               --folder apps-ms-template/ \
+               --interactive false
+
 ## Generated but uncommitted files
+
+They are the same for every project.
 
 ## `.localConfigs`
 
