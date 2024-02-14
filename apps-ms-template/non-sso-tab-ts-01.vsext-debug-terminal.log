@@ -1,0 +1,22 @@
+ *  Executing task: npm run dev:teamsfx 
+
+
+> nonssotabts01@0.1.0 dev:teamsfx
+> env-cmd --silent -f .localConfigs npm run start
+
+
+> nonssotabts01@0.1.0 start
+> nodemon --exec node --inspect=9239 --signal SIGINT -r ts-node/register src/app.ts
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `node --inspect=9239 -r ts-node/register src/app.ts`
+Debugger listening on ws://127.0.0.1:9239/c92eac67-35ce-4c5d-b62a-0dd6c5c8065a
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+(node:70660) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+restify listening to https://[::]:53000
