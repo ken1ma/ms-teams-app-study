@@ -13,6 +13,26 @@
 
 # Projects
 
+|tamplate id                   |templates directory|
+|------------------------------|-------------------|
+|bot                           |default-bot        |
+|ai-bot                        |
+|notification                  |
+|command-bot                   |
+|workflow-bot                  |
+|tab-non-sso                   |non-sso-tab        |
+|sso-launch-page               |
+|dashboard-tab                 |
+|tab-spfx                      |
+|search-app                    |
+|collect-form-message-extension|
+|search-message-extension      |
+|link-unfurling                |
+
+1. `tamplate id` as in `teamsapp list templates`
+2. `templates directory` as in https://github.com/OfficeDev/TeamsFx/tree/dev/templates/js/
+
+
 ## non-sso-tab-js-01
 
 1. Create a project

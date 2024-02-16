@@ -18,4 +18,11 @@
 
 # Commands
 
-    npm run -- teamsapp -h
+    npm run teamsapp help
+
+    npm run teamsapp list templates
+    npm run teamsapp list samples
+
+    npm run teamsapp account show
+    npm run teamsapp account login m365
+    npm run teamsapp account login azure
