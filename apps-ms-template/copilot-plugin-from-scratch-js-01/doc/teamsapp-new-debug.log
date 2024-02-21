@@ -1,0 +1,54 @@
+> teamsapp
+> teamsapp new --app-name copilot-plugin-js-01 --capability search-app --folder ../ms-teams-app-tmp/ --interactive false --debug
+
+user argument list: ["new","--app-name","copilot-plugin-js-01","--capability","search-app","--folder","../ms-teams-app-tmp/","--interactive","false","--debug"]
+matched command: teamsapp new
+find option: {"token":"--app-name","option":"app-name","value":"copilot-plugin-js-01","isGlobal":false}
+find option: {"token":"--capability","option":"capability","value":"search-app","isGlobal":false}
+find option: {"token":"--folder","option":"folder","value":"../ms-teams-app-tmp/","isGlobal":false}
+find option: {"token":"--interactive","option":"interactive","value":false,"isGlobal":true}
+find option: {"token":"--debug","option":"debug","value":true,"isGlobal":true}
+parsed context: {
+  "optionValues": {
+    "app-name": "copilot-plugin-js-01",
+    "capabilities": "search-app",
+    "folder": "../ms-teams-app-tmp/",
+    "nonInteractive": true,
+    "correlationId": "60625815-2adb-4d8a-872c-fe39374ca1c6",
+    "platform": "cli"
+  },
+  "globalOptionValues": {
+    "interactive": false,
+    "debug": true
+  },
+  "argumentValues": [],
+  "telemetryProperties": {
+    "command-name": "teamsapp new",
+    "component": "cli",
+    "run-from": "Other",
+    "bin-name": "teamsapp",
+    "command-debug": "true",
+    "command-verbose": "undefined",
+    "command-help": "undefined",
+    "command-interactive": "false",
+    "command-version": "undefined",
+    "correlation-id": "60625815-2adb-4d8a-872c-fe39374ca1c6"
+  }
+}
+sendTelemetryEvent ===> create-project-start, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"project-type","platform":"cli","stage":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"capabilities","answer":"search-app","platform":"cli","stage":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"me-architecture","answer":"new-api","platform":"cli","stage":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"programming-language","answer":"javascript","platform":"cli","stage":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"folder","answer":"","platform":"cli","stage":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"app-name","answer":"","platform":"cli","stage":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> create-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+sendTelemetryEvent ===> generate-template-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+Downloading app template "copilot-plugin-from-scratch-js" to /Users/kenichi/study/ms-teams-app-tmp/copilot-plugin-js-01
+Fetching template url with tag: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/copilot-plugin-js-01","logProvider":{"logLevel":1}}
+Fetching zip from local: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/copilot-plugin-js-01","logProvider":{"logLevel":1},"cancelDownloading":true}
+sendTelemetryEvent ===> generate-template, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","template-name":"copilot-plugin-from-scratch-js","fallback":"true","success":"yes","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+████████████████████  100% | [1/1] Create  (✔) Done.
+sendTelemetryEvent ===> create, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","capabilities":"search-app","is-from-developer-portal":"false","success":"yes","correlation-id":"b78e34cf-07a3-44be-9a0e-aaa72a2160d0","run-from":"Other"}
+Project created at: /Users/kenichi/study/ms-teams-app-tmp/copilot-plugin-js-01
+sendTelemetryEvent ===> create-project, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes","new-project-id":"f9369c10-b00e-42d9-82d2-d3ef7c78f6fc","is-creating-m365":"true"}

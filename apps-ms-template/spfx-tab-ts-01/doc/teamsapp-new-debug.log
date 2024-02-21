@@ -1,0 +1,131 @@
+> teamsapp
+> teamsapp new --app-name spfx-tab-ts-01 --capability tab-spfx --folder ../ms-teams-app-tmp/ --interactive false --debug
+
+user argument list: ["new","--app-name","spfx-tab-ts-01","--capability","tab-spfx","--folder","../ms-teams-app-tmp/","--interactive","false","--debug"]
+matched command: teamsapp new
+find option: {"token":"--app-name","option":"app-name","value":"spfx-tab-ts-01","isGlobal":false}
+find option: {"token":"--capability","option":"capability","value":"tab-spfx","isGlobal":false}
+find option: {"token":"--folder","option":"folder","value":"../ms-teams-app-tmp/","isGlobal":false}
+find option: {"token":"--interactive","option":"interactive","value":false,"isGlobal":true}
+find option: {"token":"--debug","option":"debug","value":true,"isGlobal":true}
+parsed context: {
+  "optionValues": {
+    "app-name": "spfx-tab-ts-01",
+    "capabilities": "tab-spfx",
+    "folder": "../ms-teams-app-tmp/",
+    "nonInteractive": true,
+    "correlationId": "ea408f55-8c83-4f35-863c-188d9a2c0f58",
+    "platform": "cli"
+  },
+  "globalOptionValues": {
+    "interactive": false,
+    "debug": true
+  },
+  "argumentValues": [],
+  "telemetryProperties": {
+    "command-name": "teamsapp new",
+    "component": "cli",
+    "run-from": "Other",
+    "bin-name": "teamsapp",
+    "command-debug": "true",
+    "command-verbose": "undefined",
+    "command-help": "undefined",
+    "command-interactive": "false",
+    "command-version": "undefined",
+    "correlation-id": "ea408f55-8c83-4f35-863c-188d9a2c0f58"
+  }
+}
+sendTelemetryEvent ===> create-project-start, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"project-type","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"capabilities","answer":"tab-spfx","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"spfx-solution","answer":"new","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"spfx-install-latest-package","answer":"true","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"spfx-framework-type","answer":"react","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"spfx-webpart-name","answer":"","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"programming-language","answer":"typescript","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"folder","answer":"","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"app-name","answer":"","platform":"cli","stage":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> create-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> generate-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"fx-resource-spfx","env":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+Running command: "npm view yo version", options = '{"cwd":"/var/folders/w6/grf54s4d7bz6j0fypwdxvmq40000gn/T","shell":false,"timeout":10000}'
+Command finished with outputs, cmdOutputIncludingStderr: '5.0.0
+'
+Finished running command: "npm view yo version".
+Running command: "yo "/Users/kenichi/.fx/bin/spGenerator/node_modules/@microsoft/generator-sharepoint/lib/generators/app/index.js" --skip-install true --component-type webpart --component-name helloworld --environment spo --skip-feature-deployment true --is-domain-isolated false --framework react --solution-name "spfx-tab-ts-01"", options = '{"cwd":"/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01","shell":true,"timeout":120000,"env":{"MANPATH":"/opt/homebrew/share/man:","TERM_PROGRAM":"Apple_Terminal","NODE":"/usr/local/bin/node","INIT_CWD":"/Users/kenichi/study/ms-teams-app-study","TERM":"xterm-256color","SHELL":"/usr/local/bin/bash","HOMEBREW_REPOSITORY":"/opt/homebrew","TMPDIR":"/var/folders/w6/grf54s4d7bz6j0fypwdxvmq40000gn/T/","npm_config_global_prefix":"/usr/local","TERM_PROGRAM_VERSION":"447","COLOR":"1","TERM_SESSION_ID":"DC689344-5E8F-4242-B17E-75D613FE9374","npm_config_noproxy":"","npm_config_local_prefix":"/Users/kenichi/study/ms-teams-app-study","USER":"kenichi","npm_config_globalconfig":"/usr/local/etc/npmrc","SSH_AUTH_SOCK":"/private/tmp/com.apple.launchd.JZ9U4iig9t/Listeners","__CF_USER_TEXT_ENCODING":"0x1F5:0x0:0x0","npm_execpath":"/usr/local/lib/node_modules/npm/bin/npm-cli.js","BASH_SILENCE_DEPRECATION_WARNING":"1","PATH":"/Users/kenichi/.fx/bin/yo:/Users/kenichi/.fx/bin/yo/node_modules/.bin:/Users/kenichi/study/ms-teams-app-study/node_modules/.bin:/Users/kenichi/study/node_modules/.bin:/Users/kenichi/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/kenichi/Library/Application Support/Coursier/bin","npm_package_json":"/Users/kenichi/study/ms-teams-app-study/package.json","_":"/Users/kenichi/study/ms-teams-app-study/node_modules/.bin/teamsapp","npm_config_userconfig":"/Users/kenichi/.npmrc","npm_config_init_module":"/Users/kenichi/.npm-init.js","__CFBundleIdentifier":"com.apple.Terminal","npm_command":"run-script","PWD":"/Users/kenichi/study/ms-teams-app-study","JAVA_HOME":"/Users/kenichi/Library/Caches/Coursier/arc/https/corretto.aws/downloads/resources/17.0.10.7.1/amazon-corretto-17.0.10.7.1-macosx-aarch64.tar.gz/amazon-corretto-17.jdk/Contents/Home","npm_lifecycle_event":"teamsapp","EDITOR":"vi","npm_config_npm_version":"10.2.4","XPC_FLAGS":"0x0","npm_config_node_gyp":"/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js","XPC_SERVICE_NAME":"0","SHLVL":"2","HOME":"/Users/kenichi","HOMEBREW_PREFIX":"/opt/homebrew","npm_config_cache":"/Users/kenichi/.npm","LOGNAME":"kenichi","npm_lifecycle_script":"teamsapp","LC_CTYPE":"UTF-8","npm_config_user_agent":"npm/10.2.4 node/v20.11.0 darwin arm64 workspaces/false","HOMEBREW_CELLAR":"/opt/homebrew/Cellar","INFOPATH":"/opt/homebrew/share/info:","npm_node_execpath":"/usr/local/bin/node","npm_config_prefix":"/usr/local","TEAMSFX_CLI_BIN_NAME":"teamsapp","BOT_NOTIFICATION_ENABLED":"true","TEAMSFX_M365_APP":"true","TEAMSFX_AAD_MANIFEST":"true","TEAMSFX_API_CONNECT_ENABLE":"true","TEAMSFX_DEPLOY_MANIFEST":"true"}}'
+Command finished with outputs, cmdOutputIncludingStderr: '
+     _-----_     ╭──────────────────────────╮
+    |       |    │ Welcome to the Microsoft │
+    |--(o)--|    │      365 SPFx Yeoman     │
+   `---------´   │     Generator@1.18.2     │
+    ( _´U`_ )    ╰──────────────────────────╯
+    /___A___\   /
+     |  ~  |     
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
+
+See https://aka.ms/spfx-yeoman-info for more information on how to use this generator.
+A folder with solution name spfx-tab-ts-01 will be created for you.
+A component for the spo environment will be created for you.
+A web part with the name helloworld will be added to your solution with react framework.
+Let's create a new Microsoft 365 solution.
+Add new Web part to solution spfx-tab-ts-01.
+
+    force spfx-tab-ts-01/.yo-rc.json
+   create spfx-tab-ts-01/package.json
+   create spfx-tab-ts-01/config/package-solution.json
+   create spfx-tab-ts-01/config/config.json
+   create spfx-tab-ts-01/config/serve.json
+   create spfx-tab-ts-01/.vscode/settings.json
+   create spfx-tab-ts-01/config/deploy-azure-storage.json
+   create spfx-tab-ts-01/config/sass.json
+   create spfx-tab-ts-01/config/write-manifests.json
+   create spfx-tab-ts-01/README.md
+   create spfx-tab-ts-01/.gitignore
+   create spfx-tab-ts-01/.vscode/launch.json
+   create spfx-tab-ts-01/src/index.ts
+   create spfx-tab-ts-01/.npmignore
+   create spfx-tab-ts-01/gulpfile.js
+   create spfx-tab-ts-01/tsconfig.json
+   create spfx-tab-ts-01/.eslintrc.js
+   create spfx-tab-ts-01/src/webparts/helloworld/components/IHelloworldProps.ts
+   create spfx-tab-ts-01/src/webparts/helloworld/components/Helloworld.module.scss
+   create spfx-tab-ts-01/src/webparts/helloworld/components/Helloworld.tsx
+   create spfx-tab-ts-01/src/webparts/helloworld/HelloworldWebPart.ts
+   create spfx-tab-ts-01/src/webparts/helloworld/loc/en-us.js
+   create spfx-tab-ts-01/src/webparts/helloworld/loc/mystrings.d.ts
+   create spfx-tab-ts-01/src/webparts/helloworld/assets/welcome-dark.png
+   create spfx-tab-ts-01/src/webparts/helloworld/assets/welcome-light.png
+   create spfx-tab-ts-01/src/webparts/helloworld/HelloworldWebPart.manifest.json
+   create spfx-tab-ts-01/teams/be2dafc5-46c2-4dc0-88c5-1498db6f08ed_outline.png
+   create spfx-tab-ts-01/teams/be2dafc5-46c2-4dc0-88c5-1498db6f08ed_color.png
+
+
+Skipping installation of dependencies. You should run "npm install"
+
+Changes to package.json were detected.
+Skipping package manager install.
+
+
+      _=+#####!       
+   ###########|       .---------------------------------------.
+   ###/    (##|(@)    |            Congratulations!           |
+   ###  ######|   \   |  Solution spfx-tab-ts-01 is created.  |
+   ###/   /###|   (@) |    Run gulp serve to play with it!    |
+   #######  ##|   /   '---------------------------------------'
+   ###     /##|(@)    
+   ###########|       
+      **=+####!       
+
+'
+Finished running command: "yo "/Users/kenichi/.fx/bin/spGenerator/node_modules/@microsoft/generator-sharepoint/lib/generators/app/index.js" --skip-install true --component-type webpart --component-name helloworld --environment spo --skip-feature-deployment true --is-domain-isolated false --framework react --solution-name "spfx-tab-ts-01"".
+████████████████████  100% | [4/4] Scaffolding project  (✔) Done.
+sendTelemetryEvent ===> generate-template-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+Downloading app template "spfx-tab-ts" to /Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01
+Fetching template url with tag: {"name":"ts","destination":"/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01","logProvider":{"logLevel":1}}
+Fetching zip from local: {"name":"ts","destination":"/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01","logProvider":{"logLevel":1},"cancelDownloading":true}
+sendTelemetryEvent ===> generate-template, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","template-name":"spfx-tab-ts","fallback":"true","success":"yes","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+████████████████████  100% | [1/1] Create  (✔) Done.
+sendTelemetryEvent ===> generate, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"fx-resource-spfx","env":"","spfx-solution":"new","success":"yes","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+sendTelemetryEvent ===> create, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","capabilities":"tab-spfx","is-from-developer-portal":"false","success":"yes","correlation-id":"8cf26592-c27a-4a63-8102-5b0e69eebc3c","run-from":"Other"}
+Project created at: /Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01
+sendTelemetryEvent ===> create-project, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes","new-project-id":"746d05fb-9a06-4188-aeb2-11e068c0fa60","is-creating-m365":"undefined"}

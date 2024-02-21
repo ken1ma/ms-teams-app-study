@@ -1,0 +1,53 @@
+> teamsapp
+> teamsapp new --app-name message-extension-action-js-01 --capability collect-form-message-extension --folder ../ms-teams-app-tmp/ --interactive false --debug
+
+user argument list: ["new","--app-name","message-extension-action-js-01","--capability","collect-form-message-extension","--folder","../ms-teams-app-tmp/","--interactive","false","--debug"]
+matched command: teamsapp new
+find option: {"token":"--app-name","option":"app-name","value":"message-extension-action-js-01","isGlobal":false}
+find option: {"token":"--capability","option":"capability","value":"collect-form-message-extension","isGlobal":false}
+find option: {"token":"--folder","option":"folder","value":"../ms-teams-app-tmp/","isGlobal":false}
+find option: {"token":"--interactive","option":"interactive","value":false,"isGlobal":true}
+find option: {"token":"--debug","option":"debug","value":true,"isGlobal":true}
+parsed context: {
+  "optionValues": {
+    "app-name": "message-extension-action-js-01",
+    "capabilities": "collect-form-message-extension",
+    "folder": "../ms-teams-app-tmp/",
+    "nonInteractive": true,
+    "correlationId": "21f52620-006f-45c7-aa22-d7fd3dc8edfd",
+    "platform": "cli"
+  },
+  "globalOptionValues": {
+    "interactive": false,
+    "debug": true
+  },
+  "argumentValues": [],
+  "telemetryProperties": {
+    "command-name": "teamsapp new",
+    "component": "cli",
+    "run-from": "Other",
+    "bin-name": "teamsapp",
+    "command-debug": "true",
+    "command-verbose": "undefined",
+    "command-help": "undefined",
+    "command-interactive": "false",
+    "command-version": "undefined",
+    "correlation-id": "21f52620-006f-45c7-aa22-d7fd3dc8edfd"
+  }
+}
+sendTelemetryEvent ===> create-project-start, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"project-type","platform":"cli","stage":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"capabilities","answer":"collect-form-message-extension","platform":"cli","stage":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"programming-language","answer":"javascript","platform":"cli","stage":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"folder","answer":"","platform":"cli","stage":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"app-name","answer":"","platform":"cli","stage":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+sendTelemetryEvent ===> create-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+sendTelemetryEvent ===> generate-template-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+Downloading app template "message-extension-action-js" to /Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01
+Fetching template url with tag: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01","logProvider":{"logLevel":1}}
+Fetching zip from local: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01","logProvider":{"logLevel":1},"cancelDownloading":true}
+sendTelemetryEvent ===> generate-template, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","template-name":"message-extension-action-js","fallback":"true","success":"yes","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+████████████████████  100% | [1/1] Create  (✔) Done.
+sendTelemetryEvent ===> create, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","capabilities":"collect-form-message-extension","is-from-developer-portal":"false","success":"yes","correlation-id":"b486bc24-d898-4816-a87b-f49d221145b8","run-from":"Other"}
+Project created at: /Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01
+sendTelemetryEvent ===> create-project, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes","new-project-id":"35130065-d591-4af6-8ae4-2bcda6771644","is-creating-m365":"undefined"}

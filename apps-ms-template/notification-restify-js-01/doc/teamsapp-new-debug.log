@@ -1,0 +1,54 @@
+> teamsapp
+> teamsapp new --app-name notification-restify-js-01 --capability notification --folder ../ms-teams-app-tmp/ --interactive false --debug
+
+user argument list: ["new","--app-name","notification-restify-js-01","--capability","notification","--folder","../ms-teams-app-tmp/","--interactive","false","--debug"]
+matched command: teamsapp new
+find option: {"token":"--app-name","option":"app-name","value":"notification-restify-js-01","isGlobal":false}
+find option: {"token":"--capability","option":"capability","value":"notification","isGlobal":false}
+find option: {"token":"--folder","option":"folder","value":"../ms-teams-app-tmp/","isGlobal":false}
+find option: {"token":"--interactive","option":"interactive","value":false,"isGlobal":true}
+find option: {"token":"--debug","option":"debug","value":true,"isGlobal":true}
+parsed context: {
+  "optionValues": {
+    "app-name": "notification-restify-js-01",
+    "capabilities": "notification",
+    "folder": "../ms-teams-app-tmp/",
+    "nonInteractive": true,
+    "correlationId": "f359009c-d396-4fae-b42e-488dcb63cc99",
+    "platform": "cli"
+  },
+  "globalOptionValues": {
+    "interactive": false,
+    "debug": true
+  },
+  "argumentValues": [],
+  "telemetryProperties": {
+    "command-name": "teamsapp new",
+    "component": "cli",
+    "run-from": "Other",
+    "bin-name": "teamsapp",
+    "command-debug": "true",
+    "command-verbose": "undefined",
+    "command-help": "undefined",
+    "command-interactive": "false",
+    "command-version": "undefined",
+    "correlation-id": "f359009c-d396-4fae-b42e-488dcb63cc99"
+  }
+}
+sendTelemetryEvent ===> create-project-start, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"project-type","platform":"cli","stage":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"capabilities","answer":"notification","platform":"cli","stage":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"bot-host-type-trigger","answer":"http-restify","platform":"cli","stage":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"programming-language","answer":"javascript","platform":"cli","stage":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"folder","answer":"","platform":"cli","stage":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"app-name","answer":"","platform":"cli","stage":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> create-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+sendTelemetryEvent ===> generate-template-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+Downloading app template "notification-restify-js" to /Users/kenichi/study/ms-teams-app-tmp/notification-restify-js-01
+Fetching template url with tag: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/notification-restify-js-01","logProvider":{"logLevel":1}}
+Fetching zip from local: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/notification-restify-js-01","logProvider":{"logLevel":1},"cancelDownloading":true}
+sendTelemetryEvent ===> generate-template, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","template-name":"notification-restify-js","fallback":"true","success":"yes","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+████████████████████  100% | [1/1] Create  (✔) Done.
+sendTelemetryEvent ===> create, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","capabilities":"notification","is-from-developer-portal":"false","success":"yes","correlation-id":"fba840e8-1f37-4678-8e08-ca442dda38ba","run-from":"Other"}
+Project created at: /Users/kenichi/study/ms-teams-app-tmp/notification-restify-js-01
+sendTelemetryEvent ===> create-project, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes","new-project-id":"8dc06070-ad6e-44e0-a99c-a2cd1f4b9046","is-creating-m365":"undefined"}

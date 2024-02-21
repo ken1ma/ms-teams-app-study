@@ -1,0 +1,53 @@
+> teamsapp
+> teamsapp new --app-name default-bot-js-01 --capability bot --folder ../ms-teams-app-tmp/ --interactive false --debug
+
+user argument list: ["new","--app-name","default-bot-js-01","--capability","bot","--folder","../ms-teams-app-tmp/","--interactive","false","--debug"]
+matched command: teamsapp new
+find option: {"token":"--app-name","option":"app-name","value":"default-bot-js-01","isGlobal":false}
+find option: {"token":"--capability","option":"capability","value":"bot","isGlobal":false}
+find option: {"token":"--folder","option":"folder","value":"../ms-teams-app-tmp/","isGlobal":false}
+find option: {"token":"--interactive","option":"interactive","value":false,"isGlobal":true}
+find option: {"token":"--debug","option":"debug","value":true,"isGlobal":true}
+parsed context: {
+  "optionValues": {
+    "app-name": "default-bot-js-01",
+    "capabilities": "bot",
+    "folder": "../ms-teams-app-tmp/",
+    "nonInteractive": true,
+    "correlationId": "e21354dc-7e2e-4f6b-ac58-72831d885303",
+    "platform": "cli"
+  },
+  "globalOptionValues": {
+    "interactive": false,
+    "debug": true
+  },
+  "argumentValues": [],
+  "telemetryProperties": {
+    "command-name": "teamsapp new",
+    "component": "cli",
+    "run-from": "Other",
+    "bin-name": "teamsapp",
+    "command-debug": "true",
+    "command-verbose": "undefined",
+    "command-help": "undefined",
+    "command-interactive": "false",
+    "command-version": "undefined",
+    "correlation-id": "e21354dc-7e2e-4f6b-ac58-72831d885303"
+  }
+}
+sendTelemetryEvent ===> create-project-start, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"project-type","platform":"cli","stage":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"capabilities","answer":"bot","platform":"cli","stage":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"programming-language","answer":"javascript","platform":"cli","stage":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"folder","answer":"","platform":"cli","stage":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+sendTelemetryEvent ===> askQuestion, properties: {"bin-name":"teamsapp","answerType":"skip","question":"app-name","answer":"","platform":"cli","stage":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+sendTelemetryEvent ===> create-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+sendTelemetryEvent ===> generate-template-start, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+Downloading app template "default-bot-js" to /Users/kenichi/study/ms-teams-app-tmp/default-bot-js-01
+Fetching template url with tag: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/default-bot-js-01","logProvider":{"logLevel":1}}
+Fetching zip from local: {"name":"js","destination":"/Users/kenichi/study/ms-teams-app-tmp/default-bot-js-01","logProvider":{"logLevel":1},"cancelDownloading":true}
+sendTelemetryEvent ===> generate-template, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"generator","env":"","template-name":"default-bot-js","fallback":"true","success":"yes","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+████████████████████  100% | [1/1] Create  (✔) Done.
+sendTelemetryEvent ===> create, properties: {"bin-name":"teamsapp","appid":"","tenant-id":"","component":"coordinator","env":"","capabilities":"bot","is-from-developer-portal":"false","success":"yes","correlation-id":"a362ed68-53c2-4929-8663-e5cb60c40e5d","run-from":"Other"}
+Project created at: /Users/kenichi/study/ms-teams-app-tmp/default-bot-js-01
+sendTelemetryEvent ===> create-project, properties: {"bin-name":"teamsapp","command-name":"teamsapp new","component":"cli","run-from":"Other","command-debug":"true","command-verbose":"undefined","command-help":"undefined","command-interactive":"false","command-version":"undefined","correlation-id":"","success":"yes","new-project-id":"e9d8e32d-35df-4504-a1b8-8bf55bcbd9a9","is-creating-m365":"undefined"}

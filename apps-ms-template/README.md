@@ -11,26 +11,27 @@
        npm run dev:teamsfx
 
 
-# Projects
+# Template Projects
 
-|tamplate id                   |templates directory|
-|------------------------------|-------------------|
-|bot                           |default-bot        |
-|ai-bot                        |
-|notification                  |
-|command-bot                   |
-|workflow-bot                  |
-|tab-non-sso                   |non-sso-tab        |
-|sso-launch-page               |
-|dashboard-tab                 |
-|tab-spfx                      |
-|search-app                    |
-|collect-form-message-extension|
-|search-message-extension      |
-|link-unfurling                |
+|tamplate id                   |directory                     |
+|------------------------------|------------------------------|
+|bot                           |default-bot                   |
+|ai-bot                        |ai-bot                        |
+|notification                  |notification-restify          |
+|command-bot                   |command-and-response          |
+|workflow-bot                  |workflow                      |
+|tab-non-sso                   |non-sso-tab                   |
+|sso-launch-page               |sso-tab-with-obo-flow         |
+|dashboard-tab                 |dashboard-tab                 |
+|tab-spfx                      |spfx-tab                      |
+|search-app                    |copilot-plugin-from-scratch   |
+|collect-form-message-extension|message-extension-action      |
+|search-message-extension      |(`Error: gen.TemplateNotFoundError: Unable to find template: message-extension-search.`)|
+|link-unfurling                |link-unfurling                |
 
-1. `tamplate id` as in `teamsapp list templates`
-2. `templates directory` as in https://github.com/OfficeDev/TeamsFx/tree/dev/templates/js/
+1. `tamplate id` as in `teamsapp list templates` command
+2. `directory` as in https://github.com/OfficeDev/TeamsFx/tree/dev/templates/js/ and `ts/`
+    1. `spfx-tab` exists only in `ts/`
 
 
 ## non-sso-tab-js-01
@@ -56,6 +57,81 @@
                --programming-language typescript \
                --folder apps-ms-template/ \
                --interactive false
+
+
+# Sample Projects
+
+|sample id                                |directory                                |
+|-----------------------------------------|-----------------------------------------|
+|hello-world-tab-with-backend             |                                         |
+|graph-toolkit-contact-exporter           |                                         |
+|bot-sso                                  |                                         |
+|todo-list-SPFx                           |                                         |
+|hello-world-in-meeting                   |                                         |
+|todo-list-with-Azure-backend-M365        |                                         |
+|NPM-search-connector-M365                |                                         |
+|bot-proactive-messaging-teamsfx          |                                         |
+|adaptive-card-notification               |                                         |
+|incoming-webhook-notification            |                                         |
+|stocks-update-notification-bot           |                                         |
+|query-org-user-with-message-extension-sso|                                         |
+|team-central-dashboard                   |                                         |
+|graph-connector-app                      |                                         |
+|graph-toolkit-one-productivity-hub       |                                         |
+|todo-list-with-Azure-backend             |                                         |
+|share-now                                |                                         |
+|hello-world-teams-tab-and-outlook-add-in |                                         |
+|outlook-add-in-set-signature             |                                         |
+|developer-assist-dashboard               |                                         |
+|live-share-dice-roller                   |                                         |
+|teams-chef-bot                           |                                         |
+|spfx-productivity-dashboard              |                                         |
+|react-retail-dashboard                   |                                         |
+|sso-enabled-tab-via-apim-proxy           |                                         |
+|large-scale-notification                 |                                         |
+|graph-connector-bot                      |                                         |
+|bot-conversation-python                  |                                         |
+|msgext-search-python                     |                                         |
+|gc-nodejs-typescript-food-catalog        |                                         |
+|reddit-link-unfurling                    |                                         |
+|meetings-live-code-interview             |                                         |
+|intelligent-data-chart-generator         |                                         |
+|hello-world-tab-with-backend             |                                         |
+|graph-toolkit-contact-exporter           |                                         |
+|bot-sso                                  |                                         |
+|todo-list-SPFx                           |                                         |
+|hello-world-in-meeting                   |                                         |
+|todo-list-with-Azure-backend-M365        |                                         |
+|NPM-search-connector-M365                |                                         |
+|bot-proactive-messaging-teamsfx          |                                         |
+|adaptive-card-notification               |                                         |
+|incoming-webhook-notification            |                                         |
+|stocks-update-notification-bot           |                                         |
+|query-org-user-with-message-extension-sso|                                         |
+|team-central-dashboard                   |                                         |
+|graph-connector-app                      |                                         |
+|graph-toolkit-one-productivity-hub       |                                         |
+|todo-list-with-Azure-backend             |                                         |
+|share-now                                |                                         |
+|hello-world-teams-tab-and-outlook-add-in |                                         |
+|outlook-add-in-set-signature             |                                         |
+|developer-assist-dashboard               |                                         |
+|live-share-dice-roller                   |                                         |
+|teams-chef-bot                           |                                         |
+|spfx-productivity-dashboard              |                                         |
+|react-retail-dashboard                   |                                         |
+|sso-enabled-tab-via-apim-proxy           |                                         |
+|large-scale-notification                 |                                         |
+|graph-connector-bot                      |                                         |
+|bot-conversation-python                  |                                         |
+|msgext-search-python                     |                                         |
+|gc-nodejs-typescript-food-catalog        |                                         |
+|reddit-link-unfurling                    |                                         |
+|meetings-live-code-interview             |                                         |
+|intelligent-data-chart-generator         |                                         |
+
+
+# Microsoft-Teams-Samples
 
 ## bot-file-upload-01
 
@@ -113,4 +189,5 @@ They are the same for every project.
 1. `projectId` line in `teamsapp.yml`
     1. `apps-ms-template`: `teamsapp new` generates a new line
     2. `apps-ms-sample`: a new line is appended on the first run
-
+1. Some `teamsapp new` errors
+    1. `Error: questionVisitor.InputValidationError: Input 'app-name' validation failed: Application name is longer than the maximum length of 30.`
