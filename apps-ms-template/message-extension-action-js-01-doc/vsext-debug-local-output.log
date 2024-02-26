@@ -1,0 +1,217 @@
+[2024-02-21T05:51:59.283Z] [Info] - Current VS Code locale is: en-us
+[2024-02-21T05:51:59.332Z] [Info] - Teams Toolkit extension is now active!
+[2024-02-21T05:52:41.529Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (3978, 9239) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16 || 18). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-21T05:52:42.367Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.84 seconds.
+[2024-02-21T05:52:42.391Z] [Info] - Running Visual Studio Code task: 'Start local tunnel'
+
+(Total: 1 Step) Teams Toolkit is starting the local tunneling service to forward public URL to local port and inspect traffic. Open terminal window to see the details.
+
+(1/1) Starting dev tunnel service ... 
+
+Summary:
+
+(√) Done: Forwarding URL https://sv5md0gd-3978.asse.devtunnels.ms/ to http://localhost:3978. Saved [BOT_DOMAIN, BOT_ENDPOINT] to /Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01/env/.env.local.
+
+Visit https://aka.ms/teamsfx-local-tunnel-task to learn more about 'Start local tunnel' task.
+
+[2024-02-21T05:52:43.766Z] [Info] - Started local tunneling service in 1.38 seconds.
+[2024-02-21T05:52:43.917Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(7 step(s) in total). The following actions will be executed: 
+(1/7) Action teamsApp/create: create a Teams app.
+(2/7) Action botAadApp/create: create a new or reuse an existing bot Microsoft Entra app.
+(3/7) Action botFramework/create: creates or updates the bot registration on dev.botframework.com
+(4/7) Action teamsApp/validateManifest: validate a Teams app.
+(5/7) Action teamsApp/zipAppPackage: build a Teams app package.
+(6/7) Action teamsApp/validateAppPackage: validate a Teams app.
+(7/7) Action teamsApp/update: update a Teams app.
+
+[2024-02-21T05:52:43.918Z] [Info] - Executing lifecycle provision
+[2024-02-21T05:52:47.323Z] [Info] - Executing action botAadApp/create
+[2024-02-21T05:52:47.324Z] [Info] - Creating bot Microsoft Entra app.
+[2024-02-21T05:52:47.325Z] [Info] - Sending API request: applications. Request body: {"displayName":"message-extension-action-js-01local","signInAudience":"AzureADMultipleOrgs"}
+[2024-02-21T05:52:49.648Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#applications/$entity","id":"580d1aa6-0d3b-4a78-9f9e-3b1ed05edec0","deletedDateTime":null,"appId":"9d578681-57dc-4ea3-8e9e-adda13e016e5","applicationTemplateId":null,"disabledByMicrosoftStatus":null,"createdDateTime":"2024-02-21T05:52:48.4488721Z","displayName":"message-extension-action-js-01local","description":null,"groupMembershipClaims":null,"identifierUris":[],"isDeviceOnlyAuthSupported":null,"isFallbackPublicClient":null,"notes":null,"publisherDomain":"7756s8.onmicrosoft.com","serviceManagementReference":null,"signInAudience":"AzureADMultipleOrgs","tags":[],"tokenEncryptionKeyId":null,"samlMetadataUrl":null,"defaultRedirectUri":null,"certification":null,"optionalClaims":null,"servicePrincipalLockConfiguration":null,"requestSignatureVerification":null,"addIns":[],"api":{"acceptMappedClaims":null,"knownClientApplications":[],"requestedAccessTokenVersion":null,"oauth2PermissionScopes":[],"preAuthorizedApplications":[]},"appRoles":[],"info":{"logoUrl":null,"marketingUrl":null,"privacyStatementUrl":null,"supportUrl":null,"termsOfServiceUrl":null},"keyCredentials":[],"parentalControlSettings":{"countriesBlockedForMinors":[],"legalAgeGroupRule":"Allow"},"passwordCredentials":[],"publicClient":{"redirectUris":[]},"requiredResourceAccess":[],"verifiedPublisher":{"displayName":null,"verifiedPublisherId":null,"addedDateTime":null},"web":{"homePageUrl":null,"logoutUrl":null,"redirectUris":[],"implicitGrantSettings":{"enableAccessTokenIssuance":false,"enableIdTokenIssuance":false},"redirectUriSettings":[]},"spa":{"redirectUris":[]}}.
+[2024-02-21T05:52:49.650Z] [Info] - Sending API request: applications/580d1aa6-0d3b-4a78-9f9e-3b1ed05edec0/addPassword. Request body: {"passwordCredential":{"displayName":"default"}}
+[2024-02-21T05:52:51.107Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.passwordCredential","customKeyIdentifier":null,"displayName":"default","endDateTime":"2026-02-21T05:52:50.0616546Z","hint":"277","keyId":"7c95f53f-e9c5-46d5-9be1-033012766ba6","secretText":"2778Q~9iVEiiqH8Wr9YQT6YR3NLI5P5FDdJZTbCK","startDateTime":"2024-02-21T05:52:50.0616546Z"}.
+[2024-02-21T05:52:51.108Z] [Info] - Bot Microsoft Entra app created successfully.
+[2024-02-21T05:52:51.108Z] [Info] - Created Microsoft Entra application with client id 9d578681-57dc-4ea3-8e9e-adda13e016e5.
+[2024-02-21T05:52:51.108Z] [Info] - Action botAadApp/create executed successfully
+[2024-02-21T05:52:59.269Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+1 failed.
+You can check and update your Teams manifest at ./appPackage/manifest.json.
+(×) Error: /name/short must NOT have more than 30 characters
+
+[2024-02-21T05:52:59.270Z] [Error] - Failed to Execute lifecycle provision due to failed action: teamsApp/validateManifest. ManifestValidationFailed:Teams Toolkit has completed checking your app package against validation rules. 1 failed.. Env output: {"TEAMS_APP_ID":"8cd772de-2b00-429f-b266-c0dcc7435a26","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","BOT_ID":"9d578681-57dc-4ea3-8e9e-adda13e016e5","SECRET_BOT_PASSWORD":"******"}
+[2024-02-21T05:52:59.271Z] [Info] - Execution summary:
+
+Summary:
+(×) Error: Lifecycle stage provision failed.
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app created 8cd772de-2b00-429f-b266-c0dcc7435a26
+  (√) Done: botAadApp/create was executed successfully.
+    (√) Done: Created Microsoft Entra application with client id 9d578681-57dc-4ea3-8e9e-adda13e016e5.
+  (√) Done: botFramework/create was executed successfully.
+    (√) Done: The bot registration has been created successfully (https://dev.botframework.com/bots?id=9d578681-57dc-4ea3-8e9e-adda13e016e5).
+  (×) Error: teamsApp/validateManifest failed.
+    (×) Error: Teams Toolkit has completed checking your app package against validation rules. 1 failed.
+  (!) Warning: teamsApp/zipAppPackage was not executed.
+  (!) Warning: teamsApp/validateAppPackage was not executed.
+  (!) Warning: teamsApp/update was not executed.
+
+# Edit manifest.json
+# < "short": "message-extension-action-js-01${{APP_NAME_SUFFIX}}",
+# > "short": "msg-ext-action-js-01${{APP_NAME_SUFFIX}}",
+
+[2024-02-21T05:54:13.304Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (3978, 9239) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16 || 18). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-21T05:54:14.074Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.77 seconds.
+[2024-02-21T05:54:14.079Z] [Info] - Running Visual Studio Code task: 'Start local tunnel'
+
+(Total: 1 Step) Teams Toolkit is starting the local tunneling service to forward public URL to local port and inspect traffic. Open terminal window to see the details.
+
+(1/1) Starting dev tunnel service ... 
+
+Summary:
+
+(√) Done: Forwarding URL https://qqg80r1h-3978.asse.devtunnels.ms/ to http://localhost:3978. Saved [BOT_DOMAIN, BOT_ENDPOINT] to /Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01/env/.env.local.
+
+Visit https://aka.ms/teamsfx-local-tunnel-task to learn more about 'Start local tunnel' task.
+
+[2024-02-21T05:54:15.340Z] [Info] - Started local tunneling service in 1.26 seconds.
+[2024-02-21T05:54:15.429Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(7 step(s) in total). The following actions will be executed: 
+(1/7) Action teamsApp/create: create a Teams app.
+(2/7) Action botAadApp/create: create a new or reuse an existing bot Microsoft Entra app.
+(3/7) Action botFramework/create: creates or updates the bot registration on dev.botframework.com
+(4/7) Action teamsApp/validateManifest: validate a Teams app.
+(5/7) Action teamsApp/zipAppPackage: build a Teams app package.
+(6/7) Action teamsApp/validateAppPackage: validate a Teams app.
+(7/7) Action teamsApp/update: update a Teams app.
+
+[2024-02-21T05:54:15.429Z] [Info] - Executing lifecycle provision
+[2024-02-21T05:54:16.001Z] [Info] - Executing action botAadApp/create
+[2024-02-21T05:54:16.002Z] [Info] - Bot Microsoft Entra app creation skipped.
+[2024-02-21T05:54:16.002Z] [Info] - Used existing Microsoft Entra application with client id 9d578681-57dc-4ea3-8e9e-adda13e016e5.
+[2024-02-21T05:54:16.002Z] [Info] - Action botAadApp/create executed successfully
+[2024-02-21T05:54:21.713Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+All passed.
+
+
+[2024-02-21T05:54:21.718Z] [Info] - (√)Done: Teams Package /Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01/appPackage/build/appPackage.local.zip built successfully!
+[2024-02-21T05:54:22.553Z] [Info] - 
+Teams Toolkit has checked against all validation rules:
+
+Summary:
+50 passed.
+
+
+
+A complete log of validations can be found in /Users/kenichi/Library/Application Support/Code/logs/20240221T145147/window1/exthost/TeamsDevApp.ms-teams-vscode-extension/20240221T055159.log
+[2024-02-21T05:54:24.206Z] [Info] - Finished Executing lifecycle provision. Result: {"TEAMS_APP_ID":"8cd772de-2b00-429f-b266-c0dcc7435a26","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","BOT_ID":"9d578681-57dc-4ea3-8e9e-adda13e016e5","SECRET_BOT_PASSWORD":"******","TEAMS_APP_UPDATE_TIME":"2024-02-21T05:54:23.5575487+00:00"}
+[2024-02-21T05:54:24.209Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage provision was executed successfully.
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app with id 8cd772de-2b00-429f-b266-c0dcc7435a26 already exists, skipped creating a new Teams app.
+  (√) Done: botAadApp/create was executed successfully.
+    (√) Done: Used existing Microsoft Entra application with client id 9d578681-57dc-4ea3-8e9e-adda13e016e5.
+  (√) Done: botFramework/create was executed successfully.
+    (√) Done: The bot registration has been updated successfully (https://dev.botframework.com/bots?id=9d578681-57dc-4ea3-8e9e-adda13e016e5).
+  (√) Done: teamsApp/validateManifest was executed successfully.
+  (√) Done: teamsApp/zipAppPackage was executed successfully.
+  (√) Done: teamsApp/validateAppPackage was executed successfully.
+  (√) Done: teamsApp/update was executed successfully.
+    (√) Done: Teams app updated 8cd772de-2b00-429f-b266-c0dcc7435a26
+
+[2024-02-21T05:54:24.211Z] [Info] - Successfully executed 7/7 actions in provision stage.
+[2024-02-21T05:54:24.405Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(2 step(s) in total). The following actions will be executed: 
+(1/2) Action cli/runNpmCommand: running npm command.
+(2/2) Action file/createOrUpdateEnvironmentFile: Create or update variables to environment file.
+
+[2024-02-21T05:54:24.405Z] [Info] - Executing lifecycle deploy
+[2024-02-21T05:54:32.969Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'messageextensionactionjs01@1.0.0',
+npm WARN EBADENGINE   required: { node: '16 || 18' },
+npm
+[2024-02-21T05:54:32.970Z] [Warning] -  [script action stderr]  WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T05:54:32.970Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@azure/msal-node@1.18.4',
+npm WARN EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T05:54:33.442Z] [Warning] -  [script action stderr] npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+
+[2024-02-21T05:54:33.666Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-node@1.18.4: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T05:54:33.968Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-browser@2.38.3: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T05:54:45.204Z] [Info] -  [script action stdout] 
+added 293 packages in 21s
+
+[2024-02-21T05:54:45.204Z] [Info] -  [script action stdout] 
+33 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-21T05:54:45.212Z] [Info] - Finished Executing lifecycle deploy. Result: {}
+[2024-02-21T05:54:45.212Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: cli/runNpmCommand was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01/`.
+  (√) Done: file/createOrUpdateEnvironmentFile was executed successfully.
+    (√) Done: The variables have been generated successfully to /Users/kenichi/study/ms-teams-app-tmp/message-extension-action-js-01/.localConfigs.
+
+[2024-02-21T05:54:46.422Z] [Info] - Launching Teams web client.
+
+Teams web client is being launched for you to debug the Teams app: https://teams.microsoft.com/l/app/8cd772de-2b00-429f-b266-c0dcc7435a26?installAppPackage=true&webjoin=true&appTenantId=b3d2963c-027e-4299-8463-d8ae5508bbe9&login_hint=kenichi-microsoft-2023@7756s8.onmicrosoft.com.
+
+The app supports hot reloading. If you have any code changes in the project, the app will be reloaded.

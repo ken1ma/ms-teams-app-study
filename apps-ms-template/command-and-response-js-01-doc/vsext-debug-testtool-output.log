@@ -1,0 +1,61 @@
+[2024-02-21T03:43:46.076Z] [Info] - Current VS Code locale is: en-us
+[2024-02-21T03:43:46.123Z] [Info] - Teams Toolkit extension is now active!
+[2024-02-21T03:44:10.221Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 2 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/2) Checking Node.js ...
+(2/2) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Ports (3978, 9239, 56150) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16 || 18). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-21T03:44:10.254Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.04 seconds.
+[2024-02-21T03:44:10.343Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(2 step(s) in total). The following actions will be executed: 
+(1/2) Action devTool/install: installing dependencies
+(2/2) Action cli/runNpmCommand: running npm command.
+
+[2024-02-21T03:44:10.344Z] [Info] - Executing lifecycle deploy
+[2024-02-21T03:44:31.448Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'commandandresponsejs01@1.0.0',
+npm WARN EBADENGINE
+[2024-02-21T03:44:31.449Z] [Warning] -  [script action stderr]    required: { node: '16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@azure/msal-node@1.18.4',
+npm WARN EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T03:44:32.159Z] [Warning] -  [script action stderr] npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+
+[2024-02-21T03:44:32.429Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-node@1.18.4: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T03:44:32.878Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-browser@2.38.3: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T03:44:36.365Z] [Info] -  [script action stdout] 
+added 393 packages in 24s
+
+
+[2024-02-21T03:44:36.365Z] [Info] -  [script action stdout] 72 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-21T03:44:36.377Z] [Info] - Finished Executing lifecycle deploy. Result: {}
+[2024-02-21T03:44:36.378Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: devTool/install was executed successfully.
+    (√) Done: Teams App Test Tool is installed at /Users/kenichi/study/ms-teams-app-tmp/command-and-response-js-01/devTools/teamsapptester.
+  (√) Done: cli/runNpmCommand was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-tmp/command-and-response-js-01/`.

@@ -1,0 +1,24 @@
+ *  Executing task: node /Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src/node_modules/gulp/bin/gulp.js trust-dev-cert 
+
+Error: Your dev environment is running NodeJS version v20.11.0 which does not meet the requirements for running this tool. This tool requires a version of NodeJS that matches >=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.17.1 <19.0.0
+    at SPWebBuildRig.initialize (/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src/node_modules/@microsoft/sp-build-web/lib/SPBuildRig.js:50:19)
+    at Object.initialize (/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src/node_modules/@microsoft/sp-build-web/lib/index.js:35:17)
+    at Object.<anonymous> (/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src/gulpfile.js:16:7)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at requireOrImport (/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src/node_modules/gulp-cli/lib/shared/require-or-import.js:19:11)
+
+ *  The terminal process "node '/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src/node_modules/gulp/bin/gulp.js', 'trust-dev-cert'" terminated with exit code: 1. 
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+# Remove from src/package.json
+# <   "engines": {
+# <       "node": ">=16.13.0 <17.0.0 || >=18.17.1 <19.0.0"
+# <   },
+# Edit src/package-lock.json and remove node_modules/
+# :%s/ <19.0.0//
+# The above error still happens

@@ -1,0 +1,283 @@
+[2024-02-21T04:43:30.921Z] [Info] - Current VS Code locale is: en-us
+[2024-02-21T04:43:30.955Z] [Info] - Teams Toolkit extension is now active!
+[2024-02-21T04:44:20.421Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (4321) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-21T04:44:21.380Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.96 seconds.
+[2024-02-21T04:44:21.433Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(6 step(s) in total). The following actions will be executed: 
+(1/6) Action teamsApp/create: create a Teams app.
+(2/6) Action teamsApp/validateManifest: validate a Teams app.
+(3/6) Action teamsApp/zipAppPackage: build a Teams app package.
+(4/6) Action teamsApp/validateAppPackage: validate a Teams app.
+(5/6) Action teamsApp/update: update a Teams app.
+(6/6) Action teamsApp/extendToM365: acquire an Microsoft 365 title with the app package
+
+[2024-02-21T04:44:21.434Z] [Info] - Executing lifecycle provision
+[2024-02-21T04:44:25.650Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+All passed.
+
+
+[2024-02-21T04:44:25.656Z] [Info] - (√)Done: Teams Package /Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/appPackage/build/appPackage.local.zip built successfully!
+[2024-02-21T04:44:26.665Z] [Info] - 
+Teams Toolkit has checked against all validation rules:
+
+Summary:
+3 warnings, 45 passed.
+You can check and update your Teams app package at ./appPackage/build/appPackage.local.zip.
+
+(!) Warning: Privacy URL must not be hosted in a domain different from Company/Website URL. Please ensure the privacy policy pertains to this app offering on Teams. 
+File path: manifest.json, title: DeveloperPrivacyUrlOnDifferentDomainThanWebsiteUrl 
+Learn more https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema#developer
+(!) Warning: Terms of use URL must not be hosted in a domain different from Company/Website URL. Note: Please ensure the Terms of use provided pertains to this app offering. 
+File path: manifest.json, title: DeveloperTermsOfUseUrlOnDifferentDomainThanWebsiteUrl 
+Learn more https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema#developer
+(!) Warning: Valid domains cannot contain a hosting site with a wildcard. Please remove these in your manifest. To help to ensure the security of your app and users, domains outside of your organization's control (including wildcards) and tunneling services cannot be included in the valid domains in your manifest. 
+File path: manifest.json, title: ValidDomainsContainsAWildCardHostingSite 
+Learn more https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema#validdomains
+
+A complete log of validations can be found in /Users/kenichi/Library/Application Support/Code/logs/20240221T134319/window1/exthost/TeamsDevApp.ms-teams-vscode-extension/20240221T044330.log
+[2024-02-21T04:44:36.288Z] [Info] - TitleId: U_79bdbeb1-18f6-fc8b-ea19-4faf062c7763
+[2024-02-21T04:44:36.288Z] [Info] - AppId: a18bce58-c853-40db-b156-dc4fa41a3e5a
+[2024-02-21T04:44:36.291Z] [Info] - Finished Executing lifecycle provision. Result: {"TEAMS_APP_ID":"0de0450a-ed07-4e7a-9bf0-a90b6f86b2f8","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","TEAMS_APP_UPDATE_TIME":"2024-02-21T04:44:28.0453572+00:00","M365_TITLE_ID":"U_79bdbeb1-18f6-fc8b-ea19-4faf062c7763","M365_APP_ID":"a18bce58-c853-40db-b156-dc4fa41a3e5a"}
+[2024-02-21T04:44:36.293Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage provision was executed successfully.
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app created 0de0450a-ed07-4e7a-9bf0-a90b6f86b2f8
+  (√) Done: teamsApp/validateManifest was executed successfully.
+  (√) Done: teamsApp/zipAppPackage was executed successfully.
+  (√) Done: teamsApp/validateAppPackage was executed successfully.
+  (√) Done: teamsApp/update was executed successfully.
+    (√) Done: Teams app updated 0de0450a-ed07-4e7a-9bf0-a90b6f86b2f8
+  (√) Done: teamsApp/extendToM365 was executed successfully.
+    (√) Done: The Microsoft 365 title has been acquired successfully (U_79bdbeb1-18f6-fc8b-ea19-4faf062c7763).
+
+[2024-02-21T04:44:36.294Z] [Info] - Successfully executed 6/6 actions in provision stage.
+[2024-02-21T04:44:36.316Z] [Info] -   Created environment file (secret) at /Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/env/.env.local.user
+
+
+[2024-02-21T04:44:36.384Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(1 step(s) in total). The following actions will be executed: 
+(1/1) Action cli/runNpmCommand(install dependencies): running npm command.
+
+[2024-02-21T04:44:36.384Z] [Info] - Executing lifecycle deploy
+[2024-02-21T04:45:49.998Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'spfx-tab-ts-01@0.0.1',
+npm WARN EBADENGINE   required: { node: '>=16.13.0 <17.0.0 || >=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm 
+[2024-02-21T04:45:49.999Z] [Warning] -  [script action stderr] WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/eslint-config-spfx@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-build-web@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:49.999Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-component-base@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-core-library@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:49.999Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-lodash-subset@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:49.999Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-module-interfaces@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:50.000Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-office-ui-fabric-core@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:50.000Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-property-pane@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-webpart-base@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:50.000Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-build-core-tasks@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:50.001Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-diagnostics@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE
+[2024-02-21T04:45:50.001Z] [Warning] -  [script action stderr]  }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-dynamic-data@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-http@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-page-context@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-odata-types@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN 
+[2024-02-21T04:45:50.001Z] [Warning] -  [script action stderr] EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-loader@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@microsoft/sp-image-helper@1.18.2',
+npm WARN EBADENGINE   required: { node: '>=18.17.1 <19.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm
+[2024-02-21T04:45:50.001Z] [Warning] -  [script action stderr]  WARN EBADENGINE }
+
+[2024-02-21T04:45:50.002Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@azure/msal-node@1.18.4',
+npm WARN
+[2024-02-21T04:45:50.002Z] [Warning] -  [script action stderr]  EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:45:52.502Z] [Warning] -  [script action stderr] npm WARN deprecated readdir-scoped-modules@1.1.0: This functionality has been moved to @npmcli/fs
+
+[2024-02-21T04:45:52.503Z] [Warning] -  [script action stderr] npm WARN deprecated debuglog@1.0.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+[2024-02-21T04:45:52.538Z] [Warning] -  [script action stderr] npm WARN deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+
+[2024-02-21T04:45:52.546Z] [Warning] -  [script action stderr] npm WARN deprecated read-package-tree@5.1.6: The functionality that this package provided is now in @npmcli/arborist
+
+[2024-02-21T04:45:52.593Z] [Warning] -  [script action stderr] npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+
+[2024-02-21T04:45:52.616Z] [Warning] -  [script action stderr] npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+
+[2024-02-21T04:45:52.694Z] [Warning] -  [script action stderr] npm WARN deprecated figgy-pudding@3.5.2: This module is no longer supported.
+
+[2024-02-21T04:45:52.776Z] [Warning] -  [script action stderr] npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+
+[2024-02-21T04:45:52.887Z] [Warning] -  [script action stderr] npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+
+[2024-02-21T04:45:52.893Z] [Warning] -  [script action stderr] npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+
+[2024-02-21T04:45:52.903Z] [Warning] -  [script action stderr] npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+
+[2024-02-21T04:45:52.905Z] [Warning] -  [script action stderr] npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+
+[2024-02-21T04:45:52.942Z] [Warning] -  [script action stderr] npm WARN deprecated fsevents@2.1.3: "Please update to latest v2.3 or v2.2"
+
+[2024-02-21T04:45:52.973Z] [Warning] -  [script action stderr] npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+
+[2024-02-21T04:45:53.075Z] [Warning] -  [script action stderr] npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+
+[2024-02-21T04:45:53.140Z] [Warning] -  [script action stderr] npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+[2024-02-21T04:45:53.307Z] [Warning] -  [script action stderr] npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+
+[2024-02-21T04:45:53.321Z] [Warning] -  [script action stderr] npm WARN deprecated fsevents@1.2.13: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+
+[2024-02-21T04:45:53.322Z] [Warning] -  [script action stderr] npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+
+[2024-02-21T04:45:53.325Z] [Warning] -  [script action stderr] npm WARN deprecated fsevents@1.2.13: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+
+[2024-02-21T04:45:53.325Z] [Warning] -  [script action stderr] npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+
+[2024-02-21T04:45:53.349Z] [Warning] -  [script action stderr] npm WARN deprecated fsevents@1.2.13: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+
+[2024-02-21T04:45:53.350Z] [Warning] -  [script action stderr] npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+
+[2024-02-21T04:45:53.359Z] [Warning] -  [script action stderr] npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+
+[2024-02-21T04:45:53.373Z] [Warning] -  [script action stderr] npm WARN deprecated domexception@1.0.1: Use your platform's native DOMException instead
+
+[2024-02-21T04:45:53.401Z] [Warning] -  [script action stderr] npm WARN deprecated left-pad@1.3.0: use String.prototype.padStart()
+
+[2024-02-21T04:45:53.408Z] [Warning] -  [script action stderr] npm WARN deprecated abab@1.0.4: Use your platform's native atob() and btoa() methods instead
+
+[2024-02-21T04:45:53.528Z] [Warning] -  [script action stderr] npm WARN deprecated sane@4.1.0: some dependency vulnerabilities fixed, support for node < 10 dropped, and newer ECMAScript syntax/features added
+
+[2024-02-21T04:45:53.537Z] [Warning] -  [script action stderr] npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+[2024-02-21T04:45:53.613Z] [Warning] -  [script action stderr] npm WARN deprecated gulp-util@3.0.8: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+
+[2024-02-21T04:45:53.707Z] [Warning] -  [script action stderr] npm WARN deprecated @types/anymatch@3.0.0: This is a stub types definition. anymatch provides its own type definitions, so you do not need this installed.
+
+[2024-02-21T04:45:53.809Z] [Warning] -  [script action stderr] npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+
+[2024-02-21T04:45:54.505Z] [Warning] -  [script action stderr] npm WARN deprecated adal-angular@1.0.16: This package is no longer supported. Please migrate to @azure/msal-angular.
+
+[2024-02-21T04:45:54.636Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-node@1.18.4: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:45:55.882Z] [Warning] -  [script action stderr] npm WARN deprecated msal@1.4.12: This package is no longer supported. Please use @azure/msal-browser instead.
+
+[2024-02-21T04:45:55.997Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-browser@2.28.1: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:45:56.091Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-browser@2.22.0: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:46:08.907Z] [Info] -  [script action stdout] 
+added 2522 packages in 2m
+
+[2024-02-21T04:46:08.907Z] [Info] -  [script action stdout] 
+226 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-21T04:46:08.926Z] [Info] - Finished Executing lifecycle deploy. Result: {}
+[2024-02-21T04:46:08.926Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: cli/runNpmCommand(install dependencies) was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-tmp/spfx-tab-ts-01/src`.

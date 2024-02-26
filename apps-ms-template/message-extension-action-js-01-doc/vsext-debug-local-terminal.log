@@ -1,0 +1,28 @@
+Teams Toolkit has completed checking your app package against validation rules. 1 failed.
+
+ *  The terminal process terminated with exit code: 1. 
+
+
+
+ *  Executing task: npm run dev:teamsfx 
+
+
+> messageextensionactionjs01@1.0.0 dev:teamsfx
+> env-cmd --silent -f .localConfigs npm run dev
+
+
+> messageextensionactionjs01@1.0.0 dev
+> nodemon --exec node --inspect=9239 --signal SIGINT ./src/index.js
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node --inspect=9239 ./src/index.js`
+Debugger listening on ws://127.0.0.1:9239/d950bc98-7b0a-495c-8b6d-e58ac71e58c4
+For help, see: https://nodejs.org/en/docs/inspector
+(node:31115) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Bot started, restify listening to http://[::]:3978
+Debugger attached.

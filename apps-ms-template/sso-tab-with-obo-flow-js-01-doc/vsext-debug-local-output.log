@@ -1,0 +1,314 @@
+[2024-02-21T04:29:18.812Z] [Info] - Current VS Code locale is: en-us
+[2024-02-21T04:29:18.856Z] [Info] - Teams Toolkit extension is now active!
+[2024-02-21T04:29:25.611Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (53000, 7071, 9229) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16 || 18). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-21T04:29:26.380Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.77 seconds.
+[2024-02-21T04:29:26.415Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(9 step(s) in total). The following actions will be executed: 
+(1/9) Action aadApp/create: Create a Microsoft Entra app to authenticate users
+(2/9) Action teamsApp/create: create a Teams app.
+(3/9) Action script
+(4/9) Action aadApp/update: Apply Microsoft Entra app manifest to an existing app
+(5/9) Action teamsApp/validateManifest: validate a Teams app.
+(6/9) Action teamsApp/zipAppPackage: build a Teams app package.
+(7/9) Action teamsApp/validateAppPackage: validate a Teams app.
+(8/9) Action teamsApp/update: update a Teams app.
+(9/9) Action teamsApp/extendToM365: acquire an Microsoft 365 title with the app package
+
+[2024-02-21T04:29:26.415Z] [Info] - Executing lifecycle provision
+[2024-02-21T04:29:26.416Z] [Info] - Executing action aadApp/create
+[2024-02-21T04:29:26.417Z] [Info] - Environment variable AAD_APP_CLIENT_ID does not exist, creating a new Microsoft Entra app...
+[2024-02-21T04:29:26.417Z] [Info] - Sending API request: applications. Request body: {"displayName":"sso-tab-with-obo-flow-js-01","signInAudience":"AzureADMyOrg"}
+[2024-02-21T04:29:28.455Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#applications/$entity","id":"b25820e6-91c5-4fd8-b5f2-64a4340da3b2","deletedDateTime":null,"appId":"7ec4c28f-1aea-4e62-b485-261ee45a146c","applicationTemplateId":null,"disabledByMicrosoftStatus":null,"createdDateTime":"2024-02-21T04:29:27.4998132Z","displayName":"sso-tab-with-obo-flow-js-01","description":null,"groupMembershipClaims":null,"identifierUris":[],"isDeviceOnlyAuthSupported":null,"isFallbackPublicClient":null,"notes":null,"publisherDomain":"7756s8.onmicrosoft.com","serviceManagementReference":null,"signInAudience":"AzureADMyOrg","tags":[],"tokenEncryptionKeyId":null,"samlMetadataUrl":null,"defaultRedirectUri":null,"certification":null,"optionalClaims":null,"servicePrincipalLockConfiguration":null,"requestSignatureVerification":null,"addIns":[],"api":{"acceptMappedClaims":null,"knownClientApplications":[],"requestedAccessTokenVersion":null,"oauth2PermissionScopes":[],"preAuthorizedApplications":[]},"appRoles":[],"info":{"logoUrl":null,"marketingUrl":null,"privacyStatementUrl":null,"supportUrl":null,"termsOfServiceUrl":null},"keyCredentials":[],"parentalControlSettings":{"countriesBlockedForMinors":[],"legalAgeGroupRule":"Allow"},"passwordCredentials":[],"publicClient":{"redirectUris":[]},"requiredResourceAccess":[],"verifiedPublisher":{"displayName":null,"verifiedPublisherId":null,"addedDateTime":null},"web":{"homePageUrl":null,"logoutUrl":null,"redirectUris":[],"implicitGrantSettings":{"enableAccessTokenIssuance":false,"enableIdTokenIssuance":false},"redirectUriSettings":[]},"spa":{"redirectUris":[]}}.
+[2024-02-21T04:29:28.461Z] [Info] - Created Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+[2024-02-21T04:29:28.461Z] [Info] - Environment variable SECRET_AAD_APP_CLIENT_SECRET does not exist, generating client secret for Microsoft Entra app...
+[2024-02-21T04:29:28.462Z] [Info] - Sending API request: applications/b25820e6-91c5-4fd8-b5f2-64a4340da3b2/addPassword. Request body: {"passwordCredential":{"displayName":"default"}}
+[2024-02-21T04:29:29.730Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.passwordCredential","customKeyIdentifier":null,"displayName":"default","endDateTime":"2026-02-21T04:29:28.8675892Z","hint":"EP1","keyId":"2a880610-91e3-4204-973a-b476116304a8","secretText":"EP18Q~CF8FbGHf8HEooIvSxu7Qbi9aGYsKbKBacT","startDateTime":"2024-02-21T04:29:28.8675892Z"}.
+[2024-02-21T04:29:29.731Z] [Info] - Generated client secret for Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+[2024-02-21T04:29:29.731Z] [Info] - Action aadApp/create executed successfully
+[2024-02-21T04:29:33.566Z] [Info] -  [script action stdout] ::set-teamsfx-env TAB_DOMAIN=localhost:53000
+::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000
+::set-teamsfx-env FUNC_NAME=getUserProfile
+::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071
+
+[2024-02-21T04:29:33.569Z] [Info] - Executing action aadApp/update
+[2024-02-21T04:29:33.573Z] [Info] - Build Microsoft Entra app manifest completed, and app manifest content is written to /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/build/aad.manifest.local.json
+[2024-02-21T04:29:33.574Z] [Info] - Sending API request: applications/b25820e6-91c5-4fd8-b5f2-64a4340da3b2. Request body: {"id":"b25820e6-91c5-4fd8-b5f2-64a4340da3b2","appId":"7ec4c28f-1aea-4e62-b485-261ee45a146c","displayName":"sso-tab-with-obo-flow-js-01-aad","identifierUris":["api://localhost:53000/7ec4c28f-1aea-4e62-b485-261ee45a146c"],"signInAudience":"AzureADMyOrg","api":{"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[{"adminConsentDescription":"Allows Teams to call the app's web APIs as the current user.","adminConsentDisplayName":"Teams can access app's web APIs","id":"06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3","isEnabled":true,"type":"User","userConsentDescription":"Enable Teams to call this app's web APIs with the same rights that you have","userConsentDisplayName":"Teams can access app's web APIs and make requests on your behalf","value":"access_as_user"}],"preAuthorizedApplications":[]},"info":{},"optionalClaims":{"idToken":[],"accessToken":[{"name":"idtyp","source":null,"essential":false,"additionalProperties":[]}],"saml2Token":[]},"publicClient":{"redirectUris":[]},"requiredResourceAccess":[{"resourceAppId":"00000003-0000-0000-c000-000000000000","resourceAccess":[{"id":"e1fe6dd8-ba31-4d61-89e7-88639da4683d","type":"Scope"}]}],"web":{"redirectUris":["https://localhost:53000/auth-end.html"],"implicitGrantSettings":{}},"spa":{"redirectUris":["https://localhost:53000/auth-end.html?clientId=7ec4c28f-1aea-4e62-b485-261ee45a146c","https://localhost:53000/blank-auth-end.html"]}}
+[2024-02-21T04:29:34.682Z] [Info] - Received API response: "".
+[2024-02-21T04:29:34.684Z] [Info] - Sending API request: applications/b25820e6-91c5-4fd8-b5f2-64a4340da3b2. Request body: {"id":"b25820e6-91c5-4fd8-b5f2-64a4340da3b2","appId":"7ec4c28f-1aea-4e62-b485-261ee45a146c","displayName":"sso-tab-with-obo-flow-js-01-aad","identifierUris":["api://localhost:53000/7ec4c28f-1aea-4e62-b485-261ee45a146c"],"signInAudience":"AzureADMyOrg","api":{"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[{"adminConsentDescription":"Allows Teams to call the app's web APIs as the current user.","adminConsentDisplayName":"Teams can access app's web APIs","id":"06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3","isEnabled":true,"type":"User","userConsentDescription":"Enable Teams to call this app's web APIs with the same rights that you have","userConsentDisplayName":"Teams can access app's web APIs and make requests on your behalf","value":"access_as_user"}],"preAuthorizedApplications":[{"appId":"1fec8e78-bce4-4aaf-ab1b-5451cc387264","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"5e3ce6c0-2b1f-4285-8d4b-75ee78787346","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"d3590ed6-52b3-4102-aeff-aad2292ab01c","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"00000002-0000-0ff1-ce00-000000000000","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"bc59ab01-8403-45c6-8796-ac3ef710b3e3","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"0ec893e0-5785-4de6-99da-4ed124e5296c","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"4765445b-32c6-49b0-83e6-1d93765276ca","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"4345a7b9-9a63-4910-a426-35363201d503","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]}]},"info":{},"optionalClaims":{"idToken":[],"accessToken":[{"name":"idtyp","source":null,"essential":false,"additionalProperties":[]}],"saml2Token":[]},"publicClient":{"redirectUris":[]},"requiredResourceAccess":[{"resourceAppId":"00000003-0000-0000-c000-000000000000","resourceAccess":[{"id":"e1fe6dd8-ba31-4d61-89e7-88639da4683d","type":"Scope"}]}],"web":{"redirectUris":["https://localhost:53000/auth-end.html"],"implicitGrantSettings":{}},"spa":{"redirectUris":["https://localhost:53000/auth-end.html?clientId=7ec4c28f-1aea-4e62-b485-261ee45a146c","https://localhost:53000/blank-auth-end.html"]}}
+[2024-02-21T04:29:35.977Z] [Info] - Received API response: "".
+[2024-02-21T04:29:35.978Z] [Info] - Applied manifest ./aad.manifest.json to Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+[2024-02-21T04:29:35.978Z] [Info] - Action aadApp/update executed successfully
+[2024-02-21T04:29:36.521Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+1 failed.
+You can check and update your Teams manifest at ./appPackage/manifest.json.
+(×) Error: /name/short must NOT have more than 30 characters
+
+[2024-02-21T04:29:36.522Z] [Error] - Failed to Execute lifecycle provision due to failed action: teamsApp/validateManifest. ManifestValidationFailed:Teams Toolkit has completed checking your app package against validation rules. 1 failed.. Env output: {"AAD_APP_CLIENT_ID":"7ec4c28f-1aea-4e62-b485-261ee45a146c","AAD_APP_OBJECT_ID":"b25820e6-91c5-4fd8-b5f2-64a4340da3b2","AAD_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","AAD_APP_OAUTH_AUTHORITY":"https://login.microsoftonline.com/b3d2963c-027e-4299-8463-d8ae5508bbe9","AAD_APP_OAUTH_AUTHORITY_HOST":"https://login.microsoftonline.com","SECRET_AAD_APP_CLIENT_SECRET":"******","TEAMS_APP_ID":"508350e0-58c4-4c44-86b2-c1208556896d","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","TAB_DOMAIN":"localhost:53000","TAB_ENDPOINT":"https://localhost:53000","FUNC_NAME":"getUserProfile","FUNC_ENDPOINT":"http://localhost:7071","AAD_APP_ACCESS_AS_USER_PERMISSION_ID":"06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"}
+[2024-02-21T04:29:36.523Z] [Info] - Execution summary:
+
+Summary:
+(×) Error: Lifecycle stage provision failed.
+  (√) Done: aadApp/create was executed successfully.
+    (√) Done: Created Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+    (√) Done: Generated client secret for Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app created 508350e0-58c4-4c44-86b2-c1208556896d
+  (√) Done: script was executed successfully.
+    (√) Done: Successfully executed command echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000"; echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000"; echo "::set-teamsfx-env FUNC_NAME=getUserProfile"; echo "::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071";
+  (√) Done: aadApp/update was executed successfully.
+    (√) Done: Applied manifest ./aad.manifest.json to Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+  (×) Error: teamsApp/validateManifest failed.
+    (×) Error: Teams Toolkit has completed checking your app package against validation rules. 1 failed.
+  (!) Warning: teamsApp/zipAppPackage was not executed.
+  (!) Warning: teamsApp/validateAppPackage was not executed.
+  (!) Warning: teamsApp/update was not executed.
+  (!) Warning: teamsApp/extendToM365 was not executed.
+
+# Edit manifest.json
+# < "short": "sso-tab-with-obo-flow-js-01${{APP_NAME_SUFFIX}}",
+# > "short": "sso-tab-with-obo-js-01${{APP_NAME_SUFFIX}}",
+
+[2024-02-21T04:32:02.924Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (53000, 7071, 9229) are not occupied 
+
+(!) Warning: Node.js 
+   Node.js (v20.11.0) is not the officially supported version (16 || 18). Your project may continue to work but we recommend to install the supported version. The supported node versions are specified in the package.json. Go to https://nodejs.org/about/releases/ to install a supported Node.js.
+   Restart all your Visual Studio Code instances after the installation is finished.
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-02-21T04:32:03.708Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.79 seconds.
+[2024-02-21T04:32:03.796Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(9 step(s) in total). The following actions will be executed: 
+(1/9) Action aadApp/create: Create a Microsoft Entra app to authenticate users
+(2/9) Action teamsApp/create: create a Teams app.
+(3/9) Action script
+(4/9) Action aadApp/update: Apply Microsoft Entra app manifest to an existing app
+(5/9) Action teamsApp/validateManifest: validate a Teams app.
+(6/9) Action teamsApp/zipAppPackage: build a Teams app package.
+(7/9) Action teamsApp/validateAppPackage: validate a Teams app.
+(8/9) Action teamsApp/update: update a Teams app.
+(9/9) Action teamsApp/extendToM365: acquire an Microsoft 365 title with the app package
+
+[2024-02-21T04:32:03.796Z] [Info] - Executing lifecycle provision
+[2024-02-21T04:32:03.796Z] [Info] - Executing action aadApp/create
+[2024-02-21T04:32:03.796Z] [Info] - Environment variable AAD_APP_CLIENT_ID already exist, skipping new Microsoft Entra app creation step.
+[2024-02-21T04:32:03.797Z] [Info] - Environment variable SECRET_AAD_APP_CLIENT_SECRET already exist, skipping new Microsoft Entra app creation step.
+[2024-02-21T04:32:03.797Z] [Info] - Action aadApp/create executed successfully
+[2024-02-21T04:32:04.334Z] [Info] -  [script action stdout] ::set-teamsfx-env TAB_DOMAIN=localhost:53000
+::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000
+::set-teamsfx-env FUNC_NAME=getUserProfile
+::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071
+
+[2024-02-21T04:32:04.335Z] [Info] - Executing action aadApp/update
+[2024-02-21T04:32:04.336Z] [Info] - Build Microsoft Entra app manifest completed, and app manifest content is written to /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/build/aad.manifest.local.json
+[2024-02-21T04:32:04.337Z] [Info] - Sending API request: applications/b25820e6-91c5-4fd8-b5f2-64a4340da3b2. Request body: {"id":"b25820e6-91c5-4fd8-b5f2-64a4340da3b2","appId":"7ec4c28f-1aea-4e62-b485-261ee45a146c","displayName":"sso-tab-with-obo-flow-js-01-aad","identifierUris":["api://localhost:53000/7ec4c28f-1aea-4e62-b485-261ee45a146c"],"signInAudience":"AzureADMyOrg","api":{"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[{"adminConsentDescription":"Allows Teams to call the app's web APIs as the current user.","adminConsentDisplayName":"Teams can access app's web APIs","id":"06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3","isEnabled":true,"type":"User","userConsentDescription":"Enable Teams to call this app's web APIs with the same rights that you have","userConsentDisplayName":"Teams can access app's web APIs and make requests on your behalf","value":"access_as_user"}],"preAuthorizedApplications":[]},"info":{},"optionalClaims":{"idToken":[],"accessToken":[{"name":"idtyp","source":null,"essential":false,"additionalProperties":[]}],"saml2Token":[]},"publicClient":{"redirectUris":[]},"requiredResourceAccess":[{"resourceAppId":"00000003-0000-0000-c000-000000000000","resourceAccess":[{"id":"e1fe6dd8-ba31-4d61-89e7-88639da4683d","type":"Scope"}]}],"web":{"redirectUris":["https://localhost:53000/auth-end.html"],"implicitGrantSettings":{}},"spa":{"redirectUris":["https://localhost:53000/auth-end.html?clientId=7ec4c28f-1aea-4e62-b485-261ee45a146c","https://localhost:53000/blank-auth-end.html"]}}
+[2024-02-21T04:32:05.448Z] [Info] - Received API response: "".
+[2024-02-21T04:32:05.450Z] [Info] - Sending API request: applications/b25820e6-91c5-4fd8-b5f2-64a4340da3b2. Request body: {"id":"b25820e6-91c5-4fd8-b5f2-64a4340da3b2","appId":"7ec4c28f-1aea-4e62-b485-261ee45a146c","displayName":"sso-tab-with-obo-flow-js-01-aad","identifierUris":["api://localhost:53000/7ec4c28f-1aea-4e62-b485-261ee45a146c"],"signInAudience":"AzureADMyOrg","api":{"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[{"adminConsentDescription":"Allows Teams to call the app's web APIs as the current user.","adminConsentDisplayName":"Teams can access app's web APIs","id":"06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3","isEnabled":true,"type":"User","userConsentDescription":"Enable Teams to call this app's web APIs with the same rights that you have","userConsentDisplayName":"Teams can access app's web APIs and make requests on your behalf","value":"access_as_user"}],"preAuthorizedApplications":[{"appId":"1fec8e78-bce4-4aaf-ab1b-5451cc387264","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"5e3ce6c0-2b1f-4285-8d4b-75ee78787346","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"d3590ed6-52b3-4102-aeff-aad2292ab01c","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"00000002-0000-0ff1-ce00-000000000000","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"bc59ab01-8403-45c6-8796-ac3ef710b3e3","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"0ec893e0-5785-4de6-99da-4ed124e5296c","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"4765445b-32c6-49b0-83e6-1d93765276ca","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]},{"appId":"4345a7b9-9a63-4910-a426-35363201d503","delegatedPermissionIds":["06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3"]}]},"info":{},"optionalClaims":{"idToken":[],"accessToken":[{"name":"idtyp","source":null,"essential":false,"additionalProperties":[]}],"saml2Token":[]},"publicClient":{"redirectUris":[]},"requiredResourceAccess":[{"resourceAppId":"00000003-0000-0000-c000-000000000000","resourceAccess":[{"id":"e1fe6dd8-ba31-4d61-89e7-88639da4683d","type":"Scope"}]}],"web":{"redirectUris":["https://localhost:53000/auth-end.html"],"implicitGrantSettings":{}},"spa":{"redirectUris":["https://localhost:53000/auth-end.html?clientId=7ec4c28f-1aea-4e62-b485-261ee45a146c","https://localhost:53000/blank-auth-end.html"]}}
+[2024-02-21T04:32:06.558Z] [Info] - Received API response: "".
+[2024-02-21T04:32:06.558Z] [Info] - Applied manifest ./aad.manifest.json to Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+[2024-02-21T04:32:06.558Z] [Info] - Action aadApp/update executed successfully
+[2024-02-21T04:32:06.654Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+All passed.
+
+
+[2024-02-21T04:32:06.657Z] [Info] - (√)Done: Teams Package /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/appPackage/build/appPackage.local.zip built successfully!
+[2024-02-21T04:32:07.566Z] [Info] - 
+Teams Toolkit has checked against all validation rules:
+
+Summary:
+47 passed.
+
+
+
+A complete log of validations can be found in /Users/kenichi/Library/Application Support/Code/logs/20240221T132814/window1/exthost/TeamsDevApp.ms-teams-vscode-extension/20240221T042918.log
+[2024-02-21T04:32:16.225Z] [Info] - TitleId: U_6427772a-24fb-383c-6f42-69d7ca33f15b
+[2024-02-21T04:32:16.225Z] [Info] - AppId: 39ddfcb9-e010-4d1d-b32d-d168997e9844
+[2024-02-21T04:32:16.229Z] [Info] - Finished Executing lifecycle provision. Result: {"TEAMS_APP_ID":"508350e0-58c4-4c44-86b2-c1208556896d","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","TAB_DOMAIN":"localhost:53000","TAB_ENDPOINT":"https://localhost:53000","FUNC_NAME":"getUserProfile","FUNC_ENDPOINT":"http://localhost:7071","AAD_APP_ACCESS_AS_USER_PERMISSION_ID":"06fc9818-86a3-4f2f-a4ac-dd5d0b548fa3","TEAMS_APP_UPDATE_TIME":"2024-02-21T04:32:08.6987392+00:00","M365_TITLE_ID":"U_6427772a-24fb-383c-6f42-69d7ca33f15b","M365_APP_ID":"39ddfcb9-e010-4d1d-b32d-d168997e9844"}
+[2024-02-21T04:32:16.232Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage provision was executed successfully.
+  (√) Done: aadApp/create was executed successfully.
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app with id 508350e0-58c4-4c44-86b2-c1208556896d already exists, skipped creating a new Teams app.
+  (√) Done: script was executed successfully.
+    (√) Done: Successfully executed command echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000"; echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000"; echo "::set-teamsfx-env FUNC_NAME=getUserProfile"; echo "::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071";
+  (√) Done: aadApp/update was executed successfully.
+    (√) Done: Applied manifest ./aad.manifest.json to Microsoft Entra application with object id b25820e6-91c5-4fd8-b5f2-64a4340da3b2
+  (√) Done: teamsApp/validateManifest was executed successfully.
+  (√) Done: teamsApp/zipAppPackage was executed successfully.
+  (√) Done: teamsApp/validateAppPackage was executed successfully.
+  (√) Done: teamsApp/update was executed successfully.
+    (√) Done: Teams app updated 508350e0-58c4-4c44-86b2-c1208556896d
+  (√) Done: teamsApp/extendToM365 was executed successfully.
+    (√) Done: The Microsoft 365 title has been acquired successfully (U_6427772a-24fb-383c-6f42-69d7ca33f15b).
+
+[2024-02-21T04:32:16.233Z] [Info] - Successfully executed 9/9 actions in provision stage.
+[2024-02-21T04:32:16.400Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(6 step(s) in total). The following actions will be executed: 
+(1/6) Action devTool/install: installing dependencies
+(2/6) Action cli/runNpmCommand(install dependencies): running npm command.
+(3/6) Action cli/runNpmCommand(install dependencies): running npm command.
+(4/6) Action cli/runDotnetCommand: running dotnet command.
+(5/6) Action file/createOrUpdateEnvironmentFile: Create or update variables to environment file.
+(6/6) Action file/createOrUpdateEnvironmentFile: Create or update variables to environment file.
+
+[2024-02-21T04:32:16.400Z] [Info] - Executing lifecycle deploy
+[2024-02-21T04:33:45.680Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'ssotabwithoboflowjs01@0.1.0',
+npm WARN EBADENGINE   required: { node: '16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:33:45.680Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@azure/msal-node@1.18.4',
+npm WARN EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm WARN 
+[2024-02-21T04:33:45.680Z] [Warning] -  [script action stderr] EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:33:47.528Z] [Warning] -  [script action stderr] npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+
+[2024-02-21T04:33:47.637Z] [Warning] -  [script action stderr] npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+
+[2024-02-21T04:33:47.838Z] [Warning] -  [script action stderr] npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+
+[2024-02-21T04:33:47.843Z] [Warning] -  [script action stderr] npm WARN deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+
+[2024-02-21T04:33:48.144Z] [Warning] -  [script action stderr] npm WARN deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+
+[2024-02-21T04:33:48.193Z] [Warning] -  [script action stderr] npm WARN deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+
+[2024-02-21T04:33:48.313Z] [Warning] -  [script action stderr] npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+[2024-02-21T04:33:48.335Z] [Warning] -  [script action stderr] npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+[2024-02-21T04:33:49.050Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-node@1.18.4: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:33:49.270Z] [Warning] -  [script action stderr] npm WARN deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+
+[2024-02-21T04:33:49.276Z] [Warning] -  [script action stderr] npm WARN deprecated
+[2024-02-21T04:33:49.277Z] [Warning] -  [script action stderr]  @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+
+[2024-02-21T04:33:49.282Z] [Warning] -  [script action stderr] npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+
+[2024-02-21T04:33:49.283Z] [Warning] -  [script action stderr] npm WARN deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+
+[2024-02-21T04:33:49.287Z] [Warning] -  [script action stderr] npm WARN
+[2024-02-21T04:33:49.287Z] [Warning] -  [script action stderr]  deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+
+[2024-02-21T04:33:49.920Z] [Warning] -  [script action stderr] npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+
+[2024-02-21T04:33:50.604Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-browser@2.38.3: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:33:58.216Z] [Info] -  [script action stdout] 
+added 1745 packages in 1m
+
+[2024-02-21T04:33:58.216Z] [Info] -  [script action stdout] 
+261 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-21T04:34:00.472Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'teamsfx-template-api@1.0.0',
+
+[2024-02-21T04:34:00.473Z] [Warning] -  [script action stderr] npm WARN EBADENGINE   required: { node: '16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:34:00.473Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@azure/msal-node@1.18.4',
+npm WARN EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm 
+[2024-02-21T04:34:00.473Z] [Warning] -  [script action stderr] WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-02-21T04:34:01.222Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-node@1.18.4: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:34:01.679Z] [Warning] -  [script action stderr] npm WARN deprecated @azure/msal-browser@2.38.3: A newer major version of this library is available. Please upgrade to the latest available version.
+
+[2024-02-21T04:34:03.137Z] [Info] -  [script action stdout] 
+added 269 packages in 5s
+
+
+[2024-02-21T04:34:03.137Z] [Info] -  [script action stdout] 66 packages are looking for funding
+  run `npm fund` for details
+
+[2024-02-21T04:34:03.227Z] [Info] -  [script action stdout] MSBuild version 17.3.2+561848881 for .NET
+
+[2024-02-21T04:34:03.462Z] [Info] -  [script action stdout]   Determining projects to restore...
+
+[2024-02-21T04:34:20.186Z] [Info] -  [script action stdout]   Restored /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/api/extensions.csproj (in 16.57 sec).
+
+[2024-02-21T04:34:20.517Z] [Info] -  [script action stdout]   extensions -> /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/api/bin/extensions.dll
+
+[2024-02-21T04:34:20.620Z] [Info] -  [script action stdout] 
+Build succeeded.
+
+[2024-02-21T04:34:20.620Z] [Info] -  [script action stdout]     0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:17.35
+
+[2024-02-21T04:34:20.633Z] [Info] - Finished Executing lifecycle deploy. Result: {"SSL_CRT_FILE":"/Users/kenichi/.fx/certificate/localhost.crt","SSL_KEY_FILE":"/Users/kenichi/.fx/certificate/localhost.key","FUNC_PATH":"/Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/devTools/func","DOTNET_PATH":"/Users/kenichi/.fx/bin/dotnet"}
+[2024-02-21T04:34:20.634Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: devTool/install was executed successfully.
+    (√) Done: Development certificate for localhost is installed.
+    (√) Done: Azure Functions Core Tools is installed at /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/devTools/func.
+    (√) Done: .NET Core SDK is installed at /Users/kenichi/.fx/bin/dotnet/dotnet.
+  (√) Done: cli/runNpmCommand(install dependencies) was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/`.
+  (√) Done: cli/runNpmCommand(install dependencies) was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/api`.
+  (√) Done: cli/runDotnetCommand was executed successfully.
+    (√) Done: Successful execution of the `dotnet build extensions.csproj -o bin --ignore-failed-sources` command at `/Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/api`.
+  (√) Done: file/createOrUpdateEnvironmentFile was executed successfully.
+    (√) Done: The variables have been generated successfully to /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/.localConfigs.
+  (√) Done: file/createOrUpdateEnvironmentFile was executed successfully.
+    (√) Done: The variables have been generated successfully to /Users/kenichi/study/ms-teams-app-tmp/sso-tab-with-obo-flow-js-01/api/.localConfigs.
+
+[2024-02-21T04:34:33.309Z] [Info] - Launching Teams web client.
+
+Teams web client is being launched for you to debug the Teams app: https://teams.microsoft.com/l/app/508350e0-58c4-4c44-86b2-c1208556896d?installAppPackage=true&webjoin=true&appTenantId=b3d2963c-027e-4299-8463-d8ae5508bbe9&login_hint=kenichi-microsoft-2023@7756s8.onmicrosoft.com.
+
+The app supports hot reloading. If you have any code changes in the project, the app will be reloaded.

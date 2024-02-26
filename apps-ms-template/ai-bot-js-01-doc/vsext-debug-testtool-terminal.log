@@ -1,0 +1,22 @@
+ *  Executing task: npm run dev:teamsfx:testtool 
+
+
+> aibotjs01@1.0.0 dev:teamsfx:testtool
+> env-cmd --silent -f .localConfigs.testTool npm run dev
+
+
+> aibotjs01@1.0.0 dev
+> nodemon --inspect=9239 --signal SIGINT ./src/index.js
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node --inspect=9239 ./src/index.js`
+Debugger listening on ws://127.0.0.1:9239/5572dfb5-33ac-48d6-8d2a-684fddb3c268
+For help, see: https://nodejs.org/en/docs/inspector
+(node:5818) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Bot Started, restify listening to http://[::]:3978
+Debugger attached.
