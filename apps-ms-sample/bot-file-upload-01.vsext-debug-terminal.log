@@ -1,0 +1,22 @@
+ *  Executing task: npm run dev:teamsfx 
+
+
+> teams-bot@1.0.0 dev:teamsfx
+> npm run dev
+
+
+> teams-bot@1.0.0 dev
+> nodemon --inspect=9239 --signal SIGINT ./index.js
+
+[nodemon] 2.0.20
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node --inspect=9239 ./index.js`
+Debugger listening on ws://127.0.0.1:9239/b646497b-f2d1-4fb3-a0b6-338e6b26c74a
+For help, see: https://nodejs.org/en/docs/inspector
+(node:29433) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+restify listening to http://[::]:3978
+Debugger attached.
