@@ -1,0 +1,158 @@
+[2024-03-06T23:52:44.709Z] [Info] - Current VS Code locale is: en-us
+[2024-03-06T23:52:44.767Z] [Info] - Teams Toolkit extension is now active!
+[2024-03-06T23:52:52.849Z] [Info] - Running 'Validate prerequisites' Visual Studio Code task.
+
+(Total: 3 Steps) Teams Toolkit is checking the required prerequisites.
+
+(1/3) Checking Node.js ...
+(2/3) Checking Microsoft 365 Account ...
+(3/3) Checking ports occupancy ...
+
+Summary:
+
+(√) Done: Node.js version (v20.11.0) is installed 
+(√) Done: Microsoft 365 Account (kenichi-microsoft-2023@7756s8.onmicrosoft.com) is logged in and custom app upload permission is enabled 
+(√) Done: Ports (3978, 9239) are not occupied 
+
+Visit https://aka.ms/teamsfx-tasks/check-prerequisites to learn more about 'Validate prerequisites' task.
+
+[2024-03-06T23:52:53.786Z] [Info] - Finished 'Validate prerequisites' Visual Studio Code task in 0.94 seconds.
+[2024-03-06T23:52:53.801Z] [Info] - Running Visual Studio Code task: 'Start local tunnel'
+
+(Total: 1 Step) Teams Toolkit is starting the local tunneling service to forward public URL to local port and inspect traffic. Open terminal window to see the details.
+
+(1/1) Starting dev tunnel service ... 
+
+Summary:
+
+(√) Done: Forwarding URL https://rfrhnwtt-3978.asse.devtunnels.ms/ to http://localhost:3978. Saved [BOT_DOMAIN, BOT_ENDPOINT] to /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-conversation-sso-quickstart-01/js/env/.env.local.
+
+Visit https://aka.ms/teamsfx-local-tunnel-task to learn more about 'Start local tunnel' task.
+
+[2024-03-06T23:52:55.157Z] [Info] - Started local tunneling service in 1.36 seconds.
+[2024-03-06T23:52:55.300Z] [Info] - check whether azure account is signed in.
+[2024-03-06T23:52:55.302Z] [Info] - subscription is not selected, try to select.
+[2024-03-06T23:52:55.304Z] [Info] - successful to select subscription: c29b46fa-03aa-4384-9190-a3a9608ff3fd
+[2024-03-06T23:53:00.145Z] [Info] - Executing provision 
+
+Lifecycle stage: provision(9 step(s) in total). The following actions will be executed: 
+(1/9) Action aadApp/create: Create a Microsoft Entra app to authenticate users
+(2/9) Action teamsApp/create: create a Teams app.
+(3/9) Action script
+(4/9) Action arm/deploy: Deploy the given ARM templates to Azure.
+(5/9) Action aadApp/update: Apply Microsoft Entra app manifest to an existing app
+(6/9) Action teamsApp/validateManifest: validate a Teams app.
+(7/9) Action teamsApp/zipAppPackage: build a Teams app package.
+(8/9) Action teamsApp/validateAppPackage: validate a Teams app.
+(9/9) Action teamsApp/update: update a Teams app.
+
+[2024-03-06T23:53:00.146Z] [Info] - Executing lifecycle provision
+[2024-03-06T23:53:00.146Z] [Info] - Executing action aadApp/create
+[2024-03-06T23:53:00.146Z] [Info] - Environment variable AAD_APP_CLIENT_ID does not exist, creating a new Microsoft Entra app...
+[2024-03-06T23:53:00.147Z] [Info] - Sending API request: applications. Request body: {"displayName":"bot-conversation-sso-quickstart-aad","signInAudience":"AzureADMyOrg"}
+[2024-03-06T23:53:02.146Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#applications/$entity","id":"f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5","deletedDateTime":null,"appId":"1b55d41c-aaa3-4d33-b23a-25aca3d1784b","applicationTemplateId":null,"disabledByMicrosoftStatus":null,"createdDateTime":"2024-03-06T23:53:01.736744Z","displayName":"bot-conversation-sso-quickstart-aad","description":null,"groupMembershipClaims":null,"identifierUris":[],"isDeviceOnlyAuthSupported":null,"isFallbackPublicClient":null,"notes":null,"publisherDomain":"7756s8.onmicrosoft.com","serviceManagementReference":null,"signInAudience":"AzureADMyOrg","tags":[],"tokenEncryptionKeyId":null,"uniqueName":null,"samlMetadataUrl":null,"defaultRedirectUri":null,"certification":null,"optionalClaims":null,"servicePrincipalLockConfiguration":null,"requestSignatureVerification":null,"addIns":[],"api":{"acceptMappedClaims":null,"knownClientApplications":[],"requestedAccessTokenVersion":null,"oauth2PermissionScopes":[],"preAuthorizedApplications":[]},"appRoles":[],"info":{"logoUrl":null,"marketingUrl":null,"privacyStatementUrl":null,"supportUrl":null,"termsOfServiceUrl":null},"keyCredentials":[],"parentalControlSettings":{"countriesBlockedForMinors":[],"legalAgeGroupRule":"Allow"},"passwordCredentials":[],"publicClient":{"redirectUris":[]},"requiredResourceAccess":[],"verifiedPublisher":{"displayName":null,"verifiedPublisherId":null,"addedDateTime":null},"web":{"homePageUrl":null,"logoutUrl":null,"redirectUris":[],"implicitGrantSettings":{"enableAccessTokenIssuance":false,"enableIdTokenIssuance":false},"redirectUriSettings":[]},"spa":{"redirectUris":[]}}.
+[2024-03-06T23:53:02.149Z] [Info] - Created Microsoft Entra application with object id f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5
+[2024-03-06T23:53:02.149Z] [Info] - Environment variable SECRET_AAD_APP_CLIENT_SECRET does not exist, generating client secret for Microsoft Entra app...
+[2024-03-06T23:53:02.150Z] [Info] - Sending API request: applications/f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5/addPassword. Request body: {"passwordCredential":{"displayName":"default"}}
+[2024-03-06T23:53:03.510Z] [Info] - Received API response: {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.passwordCredential","customKeyIdentifier":null,"displayName":"default","endDateTime":"2026-03-06T23:53:03.1152567Z","hint":"Hkc","keyId":"4155eff1-bc6b-47b8-9d39-ac4c55428246","secretText":"Hkc8Q~1zQDWaZUiDb.FB1cGi9Pw-XCamGzS7Mb00","startDateTime":"2024-03-06T23:53:03.1152567Z"}.
+[2024-03-06T23:53:03.511Z] [Info] - Generated client secret for Microsoft Entra application with object id f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5
+[2024-03-06T23:53:03.512Z] [Info] - Action aadApp/create executed successfully
+[2024-03-06T23:53:08.028Z] [Info] -  [script action stdout] ::set-teamsfx-env MICROSOFT_APP_TYPE=MultiTenant
+::set-teamsfx-env MICROSOFT_APP_TENANT_ID=common
+
+[2024-03-06T23:53:08.029Z] [Info] - Executing action arm/deploy
+[2024-03-06T23:53:27.215Z] [Info] - Action arm/deploy executed successfully
+[2024-03-06T23:53:27.217Z] [Info] - Executing action aadApp/update
+[2024-03-06T23:53:27.230Z] [Info] - Build Microsoft Entra app manifest completed, and app manifest content is written to /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-conversation-sso-quickstart-01/js/build/aad.manifest.local.json
+[2024-03-06T23:53:27.231Z] [Info] - Sending API request: applications/f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5. Request body: {"id":"f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5","appId":"1b55d41c-aaa3-4d33-b23a-25aca3d1784b","displayName":"bot-conversation-sso-quickstart-aad","identifierUris":["api://botid-1b55d41c-aaa3-4d33-b23a-25aca3d1784b"],"signInAudience":"AzureADandPersonalMicrosoftAccount","api":{"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[{"adminConsentDescription":"Allows Teams to call the app's web APIs as the current user.","adminConsentDisplayName":"Teams can access app's web APIs","id":"f599a374-bf5e-474d-927f-7eed39ae3513","isEnabled":true,"type":"User","userConsentDescription":"Enable Teams to call this app's web APIs with the same rights that you have","userConsentDisplayName":"Teams can access app's web APIs and make requests on your behalf","value":"access_as_user"}],"preAuthorizedApplications":[]},"info":{},"optionalClaims":{"idToken":[],"accessToken":[{"name":"idtyp","source":null,"essential":false,"additionalProperties":[]}],"saml2Token":[]},"publicClient":{"redirectUris":[]},"requiredResourceAccess":[{"resourceAppId":"00000003-0000-0000-c000-000000000000","resourceAccess":[{"id":"e1fe6dd8-ba31-4d61-89e7-88639da4683d","type":"Scope"}]}],"web":{"redirectUris":["https://rfrhnwtt-3978.asse.devtunnels.ms/auth-end.html","https://token.botframework.com/.auth/web/redirect"],"implicitGrantSettings":{"enableIdTokenIssuance":true,"enableAccessTokenIssuance":true}},"spa":{"redirectUris":[]}}
+[2024-03-06T23:53:30.710Z] [Info] - Received API response: "".
+[2024-03-06T23:53:30.712Z] [Info] - Sending API request: applications/f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5. Request body: {"id":"f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5","appId":"1b55d41c-aaa3-4d33-b23a-25aca3d1784b","displayName":"bot-conversation-sso-quickstart-aad","identifierUris":["api://botid-1b55d41c-aaa3-4d33-b23a-25aca3d1784b"],"signInAudience":"AzureADandPersonalMicrosoftAccount","api":{"requestedAccessTokenVersion":2,"oauth2PermissionScopes":[{"adminConsentDescription":"Allows Teams to call the app's web APIs as the current user.","adminConsentDisplayName":"Teams can access app's web APIs","id":"f599a374-bf5e-474d-927f-7eed39ae3513","isEnabled":true,"type":"User","userConsentDescription":"Enable Teams to call this app's web APIs with the same rights that you have","userConsentDisplayName":"Teams can access app's web APIs and make requests on your behalf","value":"access_as_user"}],"preAuthorizedApplications":[{"appId":"1fec8e78-bce4-4aaf-ab1b-5451cc387264","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"5e3ce6c0-2b1f-4285-8d4b-75ee78787346","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"d3590ed6-52b3-4102-aeff-aad2292ab01c","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"00000002-0000-0ff1-ce00-000000000000","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"bc59ab01-8403-45c6-8796-ac3ef710b3e3","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"0ec893e0-5785-4de6-99da-4ed124e5296c","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"4765445b-32c6-49b0-83e6-1d93765276ca","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]},{"appId":"4345a7b9-9a63-4910-a426-35363201d503","delegatedPermissionIds":["f599a374-bf5e-474d-927f-7eed39ae3513"]}]},"info":{},"optionalClaims":{"idToken":[],"accessToken":[{"name":"idtyp","source":null,"essential":false,"additionalProperties":[]}],"saml2Token":[]},"publicClient":{"redirectUris":[]},"requiredResourceAccess":[{"resourceAppId":"00000003-0000-0000-c000-000000000000","resourceAccess":[{"id":"e1fe6dd8-ba31-4d61-89e7-88639da4683d","type":"Scope"}]}],"web":{"redirectUris":["https://rfrhnwtt-3978.asse.devtunnels.ms/auth-end.html","https://token.botframework.com/.auth/web/redirect"],"implicitGrantSettings":{"enableIdTokenIssuance":true,"enableAccessTokenIssuance":true}},"spa":{"redirectUris":[]}}
+[2024-03-06T23:53:33.815Z] [Info] - Received API response: "".
+[2024-03-06T23:53:33.816Z] [Info] - Applied manifest ./aad.manifest.json to Microsoft Entra application with object id f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5
+[2024-03-06T23:53:33.816Z] [Info] - Action aadApp/update executed successfully
+[2024-03-06T23:53:34.586Z] [Info] - 
+Teams Toolkit has checked manifest with its schema:
+
+Summary:
+All passed.
+
+
+[2024-03-06T23:53:34.591Z] [Info] - (√)Done: Teams Package /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-conversation-sso-quickstart-01/js/appManifest/build/appManifest.local.zip built successfully!
+[2024-03-06T23:53:35.292Z] [Info] - 
+Teams Toolkit has checked against all validation rules:
+
+Summary:
+1 warning, 48 passed.
+You can check and update your Teams app package at ./appManifest/build/appManifest.local.zip.
+
+(!) Warning: Valid domains cannot contain a tunneling site. Please remove these in your manifest. To help to ensure the security of your app and users, domains outside of your organization's control (including wildcards) and tunneling services cannot be included in the valid domains in your manifest. 
+File path: manifest.json, title: ValidDomainsContainsATunnelingSite 
+Learn more https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema#validdomains
+
+A complete log of validations can be found in /Users/kenichi/Library/Application Support/Code/logs/20240307T085243/window1/exthost/TeamsDevApp.ms-teams-vscode-extension/20240306T235244.log
+[2024-03-06T23:53:36.982Z] [Info] - Finished Executing lifecycle provision. Result: {"AAD_APP_CLIENT_ID":"1b55d41c-aaa3-4d33-b23a-25aca3d1784b","AAD_APP_OBJECT_ID":"f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5","AAD_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","AAD_APP_OAUTH_AUTHORITY":"https://login.microsoftonline.com/b3d2963c-027e-4299-8463-d8ae5508bbe9","AAD_APP_OAUTH_AUTHORITY_HOST":"https://login.microsoftonline.com","SECRET_AAD_APP_CLIENT_SECRET":"******","TEAMS_APP_ID":"6d37bd85-252b-4126-b665-d2fa4a29e77f","TEAMS_APP_TENANT_ID":"b3d2963c-027e-4299-8463-d8ae5508bbe9","MICROSOFT_APP_TYPE":"MultiTenant","MICROSOFT_APP_TENANT_ID":"common","CONNECTION_NAME":"oauthbotsetting","AAD_APP_ACCESS_AS_USER_PERMISSION_ID":"f599a374-bf5e-474d-927f-7eed39ae3513","TEAMS_APP_UPDATE_TIME":"2024-03-06T23:53:36.8361459+00:00"}
+[2024-03-06T23:53:36.983Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage provision was executed successfully.
+  (√) Done: aadApp/create was executed successfully.
+    (√) Done: Created Microsoft Entra application with object id f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5
+    (√) Done: Generated client secret for Microsoft Entra application with object id f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5
+  (√) Done: teamsApp/create was executed successfully.
+    (√) Done: Teams app created 6d37bd85-252b-4126-b665-d2fa4a29e77f
+  (√) Done: script was executed successfully.
+    (√) Done: Successfully executed command echo "::set-teamsfx-env MICROSOFT_APP_TYPE=MultiTenant"; echo "::set-teamsfx-env MICROSOFT_APP_TENANT_ID=common";
+  (√) Done: arm/deploy was executed successfully.
+    (√) Done: Successfully deployed ARM templates. Resource group name: rg-nodejs50ce25-local. Deployment name: Create-resources-for-bot
+  (√) Done: aadApp/update was executed successfully.
+    (√) Done: Applied manifest ./aad.manifest.json to Microsoft Entra application with object id f83585c4-0cb1-4d7b-a7ac-bf6c7b9711d5
+  (√) Done: teamsApp/validateManifest was executed successfully.
+  (√) Done: teamsApp/zipAppPackage was executed successfully.
+  (√) Done: teamsApp/validateAppPackage was executed successfully.
+  (√) Done: teamsApp/update was executed successfully.
+    (√) Done: Teams app updated 6d37bd85-252b-4126-b665-d2fa4a29e77f
+
+[2024-03-06T23:53:36.984Z] [Info] - Successfully executed 9/9 actions in provision stage.
+[2024-03-06T23:53:37.068Z] [Info] -   Created environment file (secret) at /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-conversation-sso-quickstart-01/js/env/.env.local.user
+
+
+[2024-03-06T23:53:37.180Z] [Info] - Executing deploy 
+
+Lifecycle stage: deploy(2 step(s) in total). The following actions will be executed: 
+(1/2) Action cli/runNpmCommand: running npm command.
+(2/2) Action file/createOrUpdateEnvironmentFile: Create or update variables to environment file.
+
+[2024-03-06T23:53:37.180Z] [Info] - Executing lifecycle deploy
+[2024-03-06T23:53:39.094Z] [Warning] -  [script action stderr] npm WARN EBADENGINE Unsupported engine {
+
+[2024-03-06T23:53:39.095Z] [Warning] -  [script action stderr] npm WARN EBADENGINE   package: '@azure/msal-node@1.15.0',
+npm WARN EBADENGINE   required: { node: '10 || 12 || 14 || 16 || 18' },
+npm WARN EBADENGINE   current: { node: 'v20.11.0', npm: '10.2.4' }
+npm WARN EBADENGINE }
+
+[2024-03-06T23:53:39.677Z] [Warning] -  [script action stderr] npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+
+[2024-03-06T23:53:39.733Z] [Warning] -  [script action stderr] npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+[2024-03-06T23:53:43.836Z] [Info] -  [script action stdout] 
+added 465 packages in 6s
+
+[2024-03-06T23:53:43.837Z] [Info] -  [script action stdout] 
+78 packages are looking for funding
+  run `npm fund` for details
+
+[2024-03-06T23:53:43.848Z] [Info] - Finished Executing lifecycle deploy. Result: {}
+[2024-03-06T23:53:43.849Z] [Info] - Execution summary:
+
+Summary:
+(√) Done: Lifecycle stage deploy was executed successfully.
+  (√) Done: cli/runNpmCommand was executed successfully.
+    (√) Done: Successful execution of the `npm install --no-audit` command at `/Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-conversation-sso-quickstart-01/js/`.
+  (√) Done: file/createOrUpdateEnvironmentFile was executed successfully.
+    (√) Done: The variables have been generated successfully to /Users/kenichi/study/ms-teams-app-study/apps-ms-sample/bot-conversation-sso-quickstart-01/js/.env.
+
+[2024-03-06T23:53:45.130Z] [Info] - Launching Teams web client.
+
+Teams web client is being launched for you to debug the Teams app: https://teams.microsoft.com/l/app/6d37bd85-252b-4126-b665-d2fa4a29e77f?installAppPackage=true&webjoin=true&appTenantId=b3d2963c-027e-4299-8463-d8ae5508bbe9&login_hint=kenichi-microsoft-2023@7756s8.onmicrosoft.com.
+
+The app supports hot reloading. If you have any code changes in the project, the app will be reloaded.
